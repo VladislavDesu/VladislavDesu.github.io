@@ -7,26 +7,34 @@
       <title>My Portfolio</title>
    </head>
    <body>
-      <header>
-         <nav>
-            <svg width="80" height="80">
-               <use href="images/bag.svg#logo"></use>
-            </svg>
+      <header class="bg-light text-black">
+         <nav class="navbar navbar-expand-sm navbar-light flex-sm-column">
+            <div class="mb-sm-3">
+               <svg width="80" height="80">
+                  <use href="images/bag.svg#logo"></use>
+               </svg>
+            </div>
 
-            <ul>
-               <li>
-                  <a>Главная</a>
-               </li>
-               <li>
-                  <a>О себе</a>
-               </li>
-               <li>
-                  <a>Проекты</a>
-               </li>
-               <li>
-                  <a>Контакты</a>
-               </li>
-            </ul>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+               <ul class="nav nav-pills text-center flex-column flex-sm-row font-weight-bold text-uppercase">
+                  <li class="nav-item">
+                     <a class="nav-link active" data-toggle="pill" href="#tab-main">Главная</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" data-toggle="pill" href="#tab-about-me">О себе</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" data-toggle="pill" href="#tab-projects">Проекты</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" data-toggle="pill" href="#tab-contacts">Контакты</a>
+                  </li>
+               </ul>
+            </div>
          </nav>
       </header>
 
