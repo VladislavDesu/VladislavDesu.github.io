@@ -40,16 +40,30 @@
       </header>
 
       <main class="bg-light text-light">
-         <section class="main__content">
-            <h2 class="bg-dark text-white p-2">Главная</h2>
-            <p class="main__content-text font-weight-bold text-center p-5 mb-0">
-               <span class="d-block">Привет</span>
-               <span class="d-block">меня зовут Владислав</span>
-               <span class="d-block">я Веб-разработчик</span>
-            </p>
-         </section>
-      </main>
+         <div class="tab-content">
+            <section class="main__content tab-pane fade show active" id="tab-main">
+               <h2 class="bg-dark text-white p-2">Главная</h2>
+               <p class="main__content-text font-weight-bold text-center p-5 mb-0">
+                  <span class="d-block">Привет</span>
+                  <span class="d-block">меня зовут Владислав</span>
+                  <span class="d-block">я Веб-разработчик</span>
+               </p>
+            </section>
 
+            <section class="main__about tab-pane fade" id="tab-about-me">
+               <h2 class="bg-dark text-white p-2">О себе</h2>
+            </section>
+
+            <section class="main__ptoject tab-pane fade" id="tab-projects">
+               <h2 class="bg-dark text-white p-2">Проекты</h2>
+            </section>
+            
+            <section class="main__contacts tab-pane fade" id="tab-contacts">
+               <h2 class="bg-dark text-white p-2">Контакты</h2>
+            </section>
+         </div>
+      </main>
+      
       <footer class="bg-dark text-light p-3 d-flex justify-content-between">
          <svg style="fill: white;" width="60" height="60">
             <use href="images/bag.svg#logo"></use>
