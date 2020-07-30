@@ -1,10 +1,16 @@
-.main__content {
+.main__home {
+   height: 578px;
    background-image: url("../images/background.jpg");
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
 }
 
-.main__content-text {
-   font-size: 40px;
+.home-text-hello {
+   font-size: 5rem;
+}
+
+.home-text-name,
+.home-text-dev {
+   font-size: 1.7rem;
 }
