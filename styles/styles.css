@@ -1,5 +1,4 @@
 .main__home {
-   height: 578px;
    background-image: url("../images/background.jpg");
    background-repeat: no-repeat;
    background-size: cover;
@@ -13,4 +12,11 @@
 .home-text-name,
 .home-text-dev {
    font-size: 1.7rem;
+}
+
+.wrapper,
+.main__home,
+.main__contacts {
+   height: 100%;
+   min-height: 100%;
 }
