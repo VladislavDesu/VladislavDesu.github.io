@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="h-100">
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,140 +7,144 @@
       <link rel="stylesheet" href="styles/styles.css">
       <title>My Portfolio</title>
    </head>
-   <body>
-      <header class="sticky-top bg-light text-dark">
-         <nav class="navbar navbar-expand-md navbar-light">
-            <svg width="60" height="60">
-               <use href="images/bag.svg#logo"></use>
-            </svg>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-               <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="collapsibleNavbar">
-               <ul class="nav nav-pills text-center flex-column font-weight-bold text-uppercase">
-                  <li class="nav-item">
-                     <a class="nav-link active" data-toggle="pill" href="#tab-main">Главная</a>
-                  </li>
-
-                  <li class="nav-item">
-                     <a class="nav-link" data-toggle="pill" href="#tab-about-me">О себе</a>
-                  </li>
-
-                  <li class="nav-item">
-                     <a class="nav-link" data-toggle="pill" href="#tab-projects">Проекты</a>
-                  </li>
-
-                  <li class="nav-item">
-                     <a class="nav-link" data-toggle="pill" href="#tab-contacts">Контакты</a>
-                  </li>
-               </ul>
-            </div>
-         </nav>
-      </header>
-
-      <main class="bg-white text-dark">
-         <div class="tab-content">
-            <section class="main__home bg-dark text-light tab-pane fade show active" id="tab-main">
-               <div class="d-flex flex-column" style="height: inherit;">
-                  <h2 class="bg-dark text-white p-2 mb-0">Главная</h2>
-
-                  <p class="home-text font-weight-bold text-center my-auto">
-                     <span class="home-text-hello d-block">Привет</span>
-                     <span class="home-text-name d-block">Меня зовут Владислав</span>
-                     <span class="home-text-dev d-block">Я Веб-разработчик</span>
-                  </p>
-               </div>
-            </section>
-
-            <section class="main__about tab-pane fade" id="tab-about-me">
-               <h2 class="bg-dark text-white p-2 mb-0">О себе</h2>
-            </section>
-
-            <section class="main__ptoject tab-pane fade" id="tab-projects">
-               <h2 class="bg-dark text-white p-2 mb-0">Проекты</h2>
-
-               <div class="py-3">
-                  <ul class="list-group list-group-flush mb-0">
-                     <li class="list-group-item">
-                        <div class="card">
-                           <div class="card-body">
-                             <h5 class="card-title">Название проекта</h5>
-                             <p class="card-text">Описание проекта</p>
-                             <a href="#" class="btn btn-primary">Переход к проекту</a>
-                           </div>
-                         </div>
+   <body class="h-100">
+      <div class="d-flex flex-column wrapper">
+         <header class="sticky-top bg-light text-dark">
+            <nav class="navbar navbar-expand-md navbar-light">
+               <svg width="60" height="60">
+                  <use href="images/bag.svg#logo"></use>
+               </svg>
+   
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+   
+               <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                  <ul class="nav nav-pills text-center flex-column font-weight-bold text-uppercase">
+                     <li class="nav-item">
+                        <a class="nav-link active" data-toggle="pill" href="#tab-main">Главная</a>
+                     </li>
+   
+                     <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#tab-about-me">О себе</a>
+                     </li>
+   
+                     <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#tab-projects">Проекты</a>
+                     </li>
+   
+                     <li class="nav-item">
+                        <a class="nav-link" data-toggle="pill" href="#tab-contacts">Контакты</a>
                      </li>
                   </ul>
                </div>
-            </section>
-            
-            <section class="main__contacts tab-pane fade" id="tab-contacts">
-               <h2 class="bg-dark text-white p-2 mb-0">Контакты</h2>
-
-               <form class="container pb-3" method="POST">
-                  <fieldset class="form-row">
-                     <legend>Связь со мной:</legend>
-
-                     <p class="form-group">
-                        <label class="d-none" for="uname">Ваше имя:</label>
-                        <input class="form-control" type="text" name="user-name" id="uname" placeholder="Ваше имя:" required>
+            </nav>
+         </header>
+   
+         <main class="bg-white text-dark d-flex flex-grow-1">
+            <div class="tab-content d-flex flex-column flex-grow-1">
+               <section class="main__home bg-dark text-light tab-pane fade show active" id="tab-main">
+                  <div class="wrapper d-flex flex-column">
+                     <h2 class="bg-dark text-white p-2 mb-0">Главная</h2>
+   
+                     <p class="home-text font-weight-bold text-center my-auto">
+                        <span class="home-text-hello d-block">Привет</span>
+                        <span class="home-text-name d-block">Меня зовут Владислав</span>
+                        <span class="home-text-dev d-block">Я Веб-разработчик</span>
                      </p>
-
-                     <p class="form-group">
-                        <label class="d-none" for="uemail">Ваша электронная почта:</label>
-                        <input class="form-control" type="email" name="user-email" id="uemail" placeholder="Ваша электронная почта:" required>
-                     </p>
-
-                     <p class="form-group">
-                        <label class="d-none" for="umessage">Ваше сообщение:</label>
-                        <textarea class="form-control" name="user-msg" id="umessage" cols="10" rows="5" maxlength="165" style="resize: none;" placeholder="Ваше сообщение:" required></textarea>
-                     </p>
-
-                     <small class="font-weight-bold text-center text-uppercase">На данный момент форма не работает!</small>
-                     <button type="submit" class="btn btn-primary btn-block" disabled>Отправить</button>
-                  </fieldset>
-               </form>
-            </section>
-         </div>
-      </main>
+                  </div>
+               </section>
+   
+               <section class="main__about tab-pane fade" id="tab-about-me">
+                  <h2 class="bg-dark text-white p-2 mb-0">О себе</h2>
+               </section>
+   
+               <section class="main__ptoject tab-pane fade" id="tab-projects">
+                  <h2 class="bg-dark text-white p-2 mb-0">Проекты</h2>
+   
+                  <div class="py-3">
+                     <ul class="list-group list-group-flush mb-0">
+                        <li class="list-group-item">
+                           <div class="card">
+                              <div class="card-body">
+                                <h5 class="card-title">Название проекта</h5>
+                                <p class="card-text">Описание проекта</p>
+                                <a href="#" class="btn btn-primary">Переход к проекту</a>
+                              </div>
+                            </div>
+                        </li>
+                     </ul>
+                  </div>
+               </section>
+               
+               <section class="main__contacts tab-pane fade" id="tab-contacts">
+                  <div class="wrapper d-flex flex-column">
+                     <h2 class="bg-dark text-white p-2 mb-0">Контакты</h2>
+   
+                     <form class="container pb-3 my-auto" method="POST">
+                        <fieldset class="form-row">
+                           <legend>Связь со мной:</legend>
       
-      <footer class="bg-dark text-light p-3 d-flex justify-content-around">
-         <svg class="d-none" style="fill: white;" width="60" height="60">
-            <use href="images/bag.svg#logo"></use>
-         </svg>
-
-         <div>
-            <p class="mb-2 text-center font-weight-bold">Я в соцсетях:</p>
-
-            <ul class="d-flex list-unstyled mb-0" style="font-size: 0;">
-               <li class="mr-2">
-                  <a class="d-block bg-light rounded-circle p-1" href="https://github.com/VladislavDesu" target="_blank">My Github
-                     <svg width="30" height="30">
-                        <use href="images/github-icon.svg#github"></use>
-                     </svg>
-                  </a>
-               </li>
-
-               <li class="mr-2">
-                  <a class="d-block bg-light rounded-circle p-1" href="https://www.linkedin.com/in/vladislav-gryadko-8811261b2/" target="_blank">My LinkedIn
-                     <svg width="30" height="30">
-                        <use href="images/linkedin-icon.svg#linkedin"></use>
-                     </svg>
-                  </a>
-               </li>
-
-               <li>
-                  <a class="d-block bg-light rounded-circle p-1" href="https://t.me/VladislavDesu" target="_blank">My Telegram
-                     <svg width="30" height="30">
-                        <use href="images/telegram-icon.svg#telegram"></use>
-                     </svg>
-                  </a>
-               </li>
-            </ul>
-         </div>
-      </footer>
+                           <p class="form-group">
+                              <label class="d-none" for="uname">Ваше имя:</label>
+                              <input class="form-control" type="text" name="user-name" id="uname" placeholder="Ваше имя:" required>
+                           </p>
+      
+                           <p class="form-group">
+                              <label class="d-none" for="uemail">Ваша электронная почта:</label>
+                              <input class="form-control" type="email" name="user-email" id="uemail" placeholder="Ваша электронная почта:" required>
+                           </p>
+      
+                           <p class="form-group">
+                              <label class="d-none" for="umessage">Ваше сообщение:</label>
+                              <textarea class="form-control" name="user-msg" id="umessage" cols="10" rows="5" maxlength="165" style="resize: none;" placeholder="Ваше сообщение:" required></textarea>
+                           </p>
+      
+                           <small class="font-weight-bold text-center text-uppercase">На данный момент форма не работает!</small>
+                           <button type="submit" class="btn btn-primary btn-block" disabled>Отправить</button>
+                        </fieldset>
+                     </form>
+                  </div>
+               </section>
+            </div>
+         </main>
+         
+         <footer class="bg-dark text-light p-3 d-flex justify-content-around">
+            <svg class="d-none" style="fill: white;" width="60" height="60">
+               <use href="images/bag.svg#logo"></use>
+            </svg>
+   
+            <div>
+               <p class="mb-2 text-center font-weight-bold">Я в соцсетях:</p>
+   
+               <ul class="d-flex list-unstyled mb-0" style="font-size: 0;">
+                  <li class="mr-2">
+                     <a class="d-block bg-light rounded-circle p-1" href="https://github.com/VladislavDesu" target="_blank">My Github
+                        <svg width="30" height="30">
+                           <use href="images/github-icon.svg#github"></use>
+                        </svg>
+                     </a>
+                  </li>
+   
+                  <li class="mr-2">
+                     <a class="d-block bg-light rounded-circle p-1" href="https://www.linkedin.com/in/vladislav-gryadko-8811261b2/" target="_blank">My LinkedIn
+                        <svg width="30" height="30">
+                           <use href="images/linkedin-icon.svg#linkedin"></use>
+                        </svg>
+                     </a>
+                  </li>
+   
+                  <li>
+                     <a class="d-block bg-light rounded-circle p-1" href="https://t.me/VladislavDesu" target="_blank">My Telegram
+                        <svg width="30" height="30">
+                           <use href="images/telegram-icon.svg#telegram"></use>
+                        </svg>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </footer>
+      </div>
 
       <script src="scripts/jquery.min.js"></script>
       <script src="scripts/poper.min.js"></script>
