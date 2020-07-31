@@ -78,6 +78,30 @@
             
             <section class="main__contacts tab-pane fade" id="tab-contacts">
                <h2 class="bg-dark text-white p-2 mb-0">Контакты</h2>
+
+               <form class="container pb-3" method="POST">
+                  <fieldset class="form-row">
+                     <legend>Связь со мной:</legend>
+
+                     <p class="form-group">
+                        <label class="d-none" for="uname">Ваше имя:</label>
+                        <input class="form-control" type="text" name="user-name" id="uname" placeholder="Ваше имя:" required>
+                     </p>
+
+                     <p class="form-group">
+                        <label class="d-none" for="uemail">Ваша электронная почта:</label>
+                        <input class="form-control" type="email" name="user-email" id="uemail" placeholder="Ваша электронная почта:" required>
+                     </p>
+
+                     <p class="form-group">
+                        <label class="d-none" for="umessage">Ваше сообщение:</label>
+                        <textarea class="form-control" name="user-msg" id="umessage" cols="10" rows="5" maxlength="165" style="resize: none;" placeholder="Ваше сообщение:" required></textarea>
+                     </p>
+
+                     <small class="font-weight-bold text-center text-uppercase">На данный момент форма не работает!</small>
+                     <button type="submit" class="btn btn-primary btn-block" disabled>Отправить</button>
+                  </fieldset>
+               </form>
             </section>
          </div>
       </main>
