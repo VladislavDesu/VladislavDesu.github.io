@@ -20,3 +20,11 @@
    height: 100%;
    min-height: 100%;
 }
+
+.social-list {
+   font-size: 0;
+}
+
+.footer__logo {
+   fill: white;
+}
