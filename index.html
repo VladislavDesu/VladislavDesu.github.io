@@ -81,17 +81,7 @@
                   <h2 class="bg-dark text-white p-2 mb-0">Проекты</h2>
    
                   <div class="py-3">
-                     <ul class="list-group list-group-flush mb-0">
-                        <li class="list-group-item">
-                           <div class="card">
-                              <div class="card-body">
-                                <h5 class="card-title">Название проекта</h5>
-                                <p class="card-text">Описание проекта</p>
-                                <a href="#" class="btn btn-primary">Переход к проекту</a>
-                              </div>
-                            </div>
-                        </li>
-                     </ul>
+                     <ul class="card-list list-group list-group-flush mb-0"></ul>
                   </div>
                </section>
                
@@ -115,7 +105,7 @@
       
                            <p class="form-group">
                               <label class="d-none" for="umessage">Ваше сообщение:</label>
-                              <textarea class="form-control" name="user-msg" id="umessage" cols="10" rows="5" maxlength="165" style="resize: none;" placeholder="Ваше сообщение:" required></textarea>
+                              <textarea class="form-control" name="user-msg" id="umessage" cols="15" rows="5" maxlength="165" style="resize: none;" placeholder="Ваше сообщение:" required></textarea>
                            </p>
       
                            <small class="font-weight-bold text-center text-uppercase">На данный момент форма не работает!</small>
@@ -128,14 +118,14 @@
          </main>
          
          <footer class="bg-dark text-light p-3 d-flex justify-content-around">
-            <svg class="d-none" style="fill: white;" width="60" height="60">
+            <svg class="footer__logo d-none" width="60" height="60">
                <use href="images/bag.svg#logo"></use>
             </svg>
    
             <div>
                <p class="mb-2 text-center font-weight-bold">Я в соцсетях:</p>
    
-               <ul class="d-flex list-unstyled mb-0" style="font-size: 0;">
+               <ul class="social-list d-flex list-unstyled mb-0">
                   <li class="mr-2">
                      <a class="d-block bg-light rounded-circle p-1" href="https://github.com/VladislavDesu" target="_blank">My Github
                         <svg width="30" height="30">
@@ -164,8 +154,22 @@
          </footer>
       </div>
 
+      <template id="list-item-card">
+         <li class="list-group-item">
+            <div class="card">
+               <img src="images/mycompany.png" width="278" class="card-img-top border-bottom" alt="Изображение сайта">
+               <div class="card-body">
+                 <h5 class="card-title">Название проекта</h5>
+                 <p class="card-text">Описание проекта</p>
+                 <a href="/mycompany" class="btn btn-primary">Переход к проекту</a>
+               </div>
+             </div>
+         </li>
+      </template>
+
       <script src="scripts/jquery.min.js"></script>
       <script src="scripts/poper.min.js"></script>
       <script src="scripts/bootstrap.min.js"></script>
+      <script src="scripts/cards.js"></script>
    </body>
 </html>
