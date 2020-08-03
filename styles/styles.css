@@ -5,18 +5,17 @@
    background-position: center;
 }
 
-.home-text-hello {
+.main__home-hello {
    font-size: 5rem;
 }
 
-.home-text-name,
-.home-text-dev {
+.main__home-name,
+.main__home-dev {
    font-size: 1.7rem;
 }
 
 .wrapper,
-.main__home,
-.main__contacts {
+.main__home {
    height: 100%;
    min-height: 100%;
 }
@@ -35,11 +34,11 @@
    height: 60px;
 }
 
-.about-me {
+.main__about-me {
    padding-top: 60px;
 }
 
-.my-photo {
+.main__about-photo {
    width: 60px;
    height: 60px;
    top: 0;
@@ -49,6 +48,63 @@
    background-position: center 0%;
    background-repeat: no-repeat;
    background-size: cover;
+}
+
+.main__home-title--icon::before,
+.main__about-title--icon::before,
+.main__projects-title--icon::before,
+.main__contacts-title--icon::before {
+   content: "";
+   position: absolute;
+   top: 15px;
+   left: 13px;
+   width: 25px;
+   height: 25px;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+/*Поменять размеры и сделать картинки как модификатор и не before*/
+.main__home-title--icon::before {
+   background-image: url("../images/home-icon.svg");
+}
+
+.main__about-title--icon::before {
+   background-image: url("../images/about-icon.svg");
+}
+
+.main__contacts-title--icon::before {
+   background-image: url("../images/contacts-icon.svg");
+}
+
+.main__projects-title--icon::before {
+   background-image: url("../images/projects-icon.svg");
+}
+
+.main__contacts-form--icon-user::after,
+.main__contacts-form--icon-email::after,
+.main__contacts-form--icon-msg::after {
+   content: "";
+   position: absolute;
+   left: 6px;
+   top: 12px;
+   width: 15px;
+   height: 15px;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+}
+
+.main__contacts-form--icon-user::after {
+   background-image: url("../images/user-icon.svg");
+}
+
+.main__contacts-form--icon-email::after {
+   background-image: url("../images/email-icon.svg");
+}
+
+.main__contacts-form--icon-msg::after {
+   background-image: url("../images/msg-icon.svg");
 }
 
 @media (min-width: 768px) {
@@ -63,12 +119,12 @@
       height: 65px;
    }
 
-   .home-text-hello {
+   .main__home-hello {
       font-size: 6rem;
    }
    
-   .home-text-name,
-   .home-text-dev {
+   .main__home-name,
+   .main__home-dev {
       font-size: 2.2rem;
    }
 
@@ -77,13 +133,30 @@
       height: 35px;
    }
 
-   .about-me {
+   .main__about-me {
       padding-top: 80px;
    }
 
-   .my-photo {
+   .main__about-photo {
       width: 80px;
       height: 80px;
+   }
+
+   .main__home-title--icon::before,
+   .main__about-title--icon::before,
+   .main__projects-title--icon::before,
+   .main__contacts-title--icon::before {
+      width: 28px;
+      height: 28px;
+   }
+
+   .main__contacts-form--icon-user::after,
+   .main__contacts-form--icon-email::after,
+   .main__contacts-form--icon-msg::after {
+      width: 18px;
+      height: 18px;
+      top: 45px;
+      left: 6px;
    }
 }
 
@@ -99,21 +172,38 @@
       height: 70px;
    }
 
-   .home-text-hello {
+   .main__home-hello {
       font-size: 6.5rem;
    }
    
-   .home-text-name,
-   .home-text-dev {
+   .main__home-name,
+   .main__home-dev {
       font-size: 3rem;
    }
 
-   .about-me {
+   .main__about-me {
       padding-top: 100px;
    }
 
-   .my-photo {
+   .main__about-photo {
       width: 100px;
       height: 100px;
+   }
+
+   .main__home-title--icon::before,
+   .main__about-title--icon::before,
+   .main__projects-title--icon::before,
+   .main__contacts-title--icon::before {
+      width: 30px;
+      height: 30px;
+   }
+
+   .main__contacts-form--icon-user::after,
+   .main__contacts-form--icon-email::after,
+   .main__contacts-form--icon-msg::after {
+      width: 20px;
+      height: 20px;
+      top: 48px;
+      left: 5px;
    }
 }
