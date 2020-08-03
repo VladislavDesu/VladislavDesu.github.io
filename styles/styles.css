@@ -28,3 +28,92 @@
 .footer__logo {
    fill: white;
 }
+
+.header__logo,
+.footer__logo {
+   width: 60px;
+   height: 60px;
+}
+
+.about-me {
+   padding-top: 60px;
+}
+
+.my-photo {
+   width: 60px;
+   height: 60px;
+   top: 0;
+   left: 50%;
+   margin-left: -30px;
+   background-image: url("../images/my-photo.jpg");
+   background-position: center 0%;
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+@media (min-width: 768px) {
+   body,
+   html {
+      font-size: 17px;
+   }
+
+   .header__logo,
+   .footer__logo {
+      width: 65px;
+      height: 65px;
+   }
+
+   .home-text-hello {
+      font-size: 6rem;
+   }
+   
+   .home-text-name,
+   .home-text-dev {
+      font-size: 2.2rem;
+   }
+
+   .social-list__icon {
+      width: 35px;
+      height: 35px;
+   }
+
+   .about-me {
+      padding-top: 80px;
+   }
+
+   .my-photo {
+      width: 80px;
+      height: 80px;
+   }
+}
+
+@media (min-width: 992px) {
+   body,
+   html {
+      font-size: 18px;
+   }
+
+   .header__logo,
+   .footer__logo {
+      width: 70px;
+      height: 70px;
+   }
+
+   .home-text-hello {
+      font-size: 6.5rem;
+   }
+   
+   .home-text-name,
+   .home-text-dev {
+      font-size: 3rem;
+   }
+
+   .about-me {
+      padding-top: 100px;
+   }
+
+   .my-photo {
+      width: 100px;
+      height: 100px;
+   }
+}
