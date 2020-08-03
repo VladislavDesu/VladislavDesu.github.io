@@ -9,7 +9,7 @@
       <title>My Portfolio</title>
    </head>
    <body class="h-100">
-      <div class="d-flex flex-column wrapper">
+      <div class="d-flex flex-column wrapper position-relative">
          <header class="header bg-white text-dark">
             <nav class="navbar navbar-expand-md navbar-light">
                <svg class="header__logo" width="60" height="60">
@@ -165,15 +165,18 @@
                <div class="card-body d-flex flex-column justify-content-end">
                  <h5 class="card-title">Название проекта</h5>
                  <p class="card-text">Описание проекта</p>
-                 <a href="/mycompany" class="btn btn-primary">Переход к проекту</a>
+                 <a href="/mycompany" class="btn btn-primary" target="_blank">Переход к проекту</a>
                </div>
              </div>
          </li>
       </template>
 
+      <a class="scroll-up position-fixed bg-dark rounded-circle" aria-label="Скролл наверх"></a>
+
       <script src="scripts/jquery.min.js"></script>
       <script src="scripts/poper.min.js"></script>
       <script src="scripts/bootstrap.min.js"></script>
       <script src="scripts/cards.js"></script>
+      <script src="scripts/scrollup.js"></script>
    </body>
 </html>
