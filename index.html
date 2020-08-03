@@ -9,9 +9,9 @@
    </head>
    <body class="h-100">
       <div class="d-flex flex-column wrapper">
-         <header class="sticky-top bg-light text-dark">
+         <header class="bg-white text-dark">
             <nav class="navbar navbar-expand-md navbar-light">
-               <svg width="60" height="60">
+               <svg class="header__logo" width="60" height="60">
                   <use href="images/bag.svg#logo"></use>
                </svg>
    
@@ -19,17 +19,17 @@
                   <span class="navbar-toggler-icon"></span>
                </button>
    
-               <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                  <ul class="nav nav-pills text-center flex-column font-weight-bold text-uppercase">
-                     <li class="nav-item">
+               <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+                  <ul class="nav nav-pills text-center flex-column flex-md-row font-weight-bold text-uppercase">
+                     <li class="nav-item mr-md-3">
                         <a class="nav-link active" data-toggle="pill" href="#tab-main">Главная</a>
                      </li>
    
-                     <li class="nav-item">
+                     <li class="nav-item mr-md-3">
                         <a class="nav-link" data-toggle="pill" href="#tab-about-me">О себе</a>
                      </li>
    
-                     <li class="nav-item">
+                     <li class="nav-item mr-md-3">
                         <a class="nav-link" data-toggle="pill" href="#tab-projects">Проекты</a>
                      </li>
    
@@ -57,31 +57,34 @@
    
                <section class="main__about tab-pane fade" id="tab-about-me">
                   <h2 class="bg-dark text-white p-2 mb-0">О себе</h2>
-                  <p class="p-3 text-justify">
-                     Меня зовут Владислав, мне 20 лет. Изучаю frontend
-                     технологии на протяжении года. Позиционирую себя как Junior
-                     frontend developer. Хочу достичь большого успеха в этой
-                     сфере, для этого я постоянно изучаю новые технологии, читаю
-                     интересные статьи на разные темы, прохожу онлайн курсы.
-                     Junior это одна из ступенек развития в сторону Senior
-                     frontend developer, для этого я изучаю JavaScript, в
-                     свободное время читаю книги и статьи. Все это время
-                     разрабатывал макеты для себя, что бы укрепить знания на
-                     практике. В дальнейшем хочу изучать JavaScript фреймворки.
-                     В ближайшее время хочу реализовать несколько своих проектов
-                     и идей.
-                  </p>
-                  <p>
-                     Больше информации обо мне можно прочитать в моем CV
-                     <a class="btn btn-primary" href="info/resume.pdf" download>Скачать</a>
-                  </p>
+                  <div class="about-me mt-3 position-relative container text-justify">
+                     <div class="my-photo position-absolute rounded-circle bg-dark border-dark"></div>
+                     <p>
+                        Меня зовут Владислав, мне 20 лет. Изучаю frontend
+                        технологии на протяжении года. Позиционирую себя как Junior
+                        frontend developer. Хочу достичь большого успеха в этой
+                        сфере, для этого я постоянно изучаю новые технологии, читаю
+                        интересные статьи на разные темы, прохожу онлайн курсы.
+                        Junior это одна из ступенек развития в сторону Senior
+                        frontend developer, для этого я изучаю JavaScript, в
+                        свободное время читаю книги и статьи. Все это время
+                        разрабатывал макеты для себя, что бы укрепить знания на
+                        практике. В дальнейшем хочу изучать JavaScript фреймворки.
+                        В ближайшее время хочу реализовать несколько своих проектов
+                        и идей.
+                     </p>
+                     <p>
+                        Больше информации обо мне можно прочитать в моем CV
+                        <a class="btn btn-primary" href="info/resume.pdf" download>Скачать</a>
+                     </p>
+                  </div>
                </section>
 
                <section class="main__ptoject tab-pane fade" id="tab-projects">
                   <h2 class="bg-dark text-white p-2 mb-0">Проекты</h2>
    
-                  <div class="py-3">
-                     <ul class="card-list list-group list-group-flush mb-0"></ul>
+                  <div class="container py-3">
+                     <ul class="card-list list-group list-group-flush flex-md-row justify-content-center mb-0 row row-cols-md-2 row-cols-lg-3"></ul>
                   </div>
                </section>
                
@@ -117,18 +120,18 @@
             </div>
          </main>
          
-         <footer class="bg-dark text-light p-3 d-flex justify-content-around">
-            <svg class="footer__logo d-none" width="60" height="60">
+         <footer class="bg-dark text-light p-3 d-flex align-items-center">
+            <svg class="footer__logo d-none d-md-block" width="60" height="60">
                <use href="images/bag.svg#logo"></use>
             </svg>
    
-            <div>
+            <div class="flex-grow-1">
                <p class="mb-2 text-center font-weight-bold">Я в соцсетях:</p>
    
-               <ul class="social-list d-flex list-unstyled mb-0">
+               <ul class="social-list d-flex justify-content-center list-unstyled mb-0">
                   <li class="mr-2">
                      <a class="d-block bg-light rounded-circle p-1" href="https://github.com/VladislavDesu" target="_blank">My Github
-                        <svg width="30" height="30">
+                        <svg class="social-list__icon" width="30" height="30">
                            <use href="images/github-icon.svg#github"></use>
                         </svg>
                      </a>
@@ -136,7 +139,7 @@
    
                   <li class="mr-2">
                      <a class="d-block bg-light rounded-circle p-1" href="https://www.linkedin.com/in/vladislav-gryadko-8811261b2/" target="_blank">My LinkedIn
-                        <svg width="30" height="30">
+                        <svg class="social-list__icon" width="30" height="30">
                            <use href="images/linkedin-icon.svg#linkedin"></use>
                         </svg>
                      </a>
@@ -144,7 +147,7 @@
    
                   <li>
                      <a class="d-block bg-light rounded-circle p-1" href="https://t.me/VladislavDesu" target="_blank">My Telegram
-                        <svg width="30" height="30">
+                        <svg class="social-list__icon" width="30" height="30">
                            <use href="images/telegram-icon.svg#telegram"></use>
                         </svg>
                      </a>
@@ -155,10 +158,10 @@
       </div>
 
       <template id="list-item-card">
-         <li class="list-group-item">
-            <div class="card">
-               <img src="images/mycompany.png" width="278" class="card-img-top border-bottom" alt="Изображение сайта">
-               <div class="card-body">
+         <li class="list-group-item col">
+            <div class="card h-100">
+               <img src="images/mycompany.png" width="278" class="card-img-top img-fluid border-bottom" alt="Изображение сайта">
+               <div class="card-body d-flex flex-column justify-content-end">
                  <h5 class="card-title">Название проекта</h5>
                  <p class="card-text">Описание проекта</p>
                  <a href="/mycompany" class="btn btn-primary">Переход к проекту</a>
