@@ -10,7 +10,7 @@
    </head>
    <body class="h-100">
       <div class="d-flex flex-column wrapper">
-         <header class="bg-white text-dark">
+         <header class="header bg-white text-dark">
             <nav class="navbar navbar-expand-md navbar-light">
                <svg class="header__logo" width="60" height="60">
                   <use href="images/bag.svg#logo"></use>
@@ -42,24 +42,24 @@
             </nav>
          </header>
    
-         <main class="bg-white text-dark d-flex flex-grow-1">
+         <main class="main bg-white text-dark d-flex flex-grow-1">
             <div class="tab-content d-flex flex-column flex-grow-1">
                <section class="main__home bg-dark text-light tab-pane fade show active" id="tab-main">
                   <div class="wrapper d-flex flex-column">
-                     <h2 class="bg-dark text-white p-2 mb-0">Главная</h2>
+                     <h2 class="main__home-title main__home-title--icon position-relative bg-dark text-white p-2 pl-5 mb-0">Главная</h2>
    
-                     <p class="home-text font-weight-bold text-center my-auto">
-                        <span class="home-text-hello d-block">Привет</span>
-                        <span class="home-text-name d-block">Меня зовут Владислав</span>
-                        <span class="home-text-dev d-block">Я Веб-разработчик</span>
+                     <p class="main__home-text font-weight-bold text-center my-auto">
+                        <span class="main__home-hello d-block">Привет</span>
+                        <span class="main__home-name d-block">Меня зовут Владислав</span>
+                        <span class="main__home-dev d-block">Я Веб-разработчик</span>
                      </p>
                   </div>
                </section>
    
                <section class="main__about tab-pane fade" id="tab-about-me">
-                  <h2 class="bg-dark text-white p-2 mb-0">О себе</h2>
-                  <div class="about-me mt-3 position-relative container text-justify">
-                     <div class="my-photo position-absolute rounded-circle bg-dark border-dark"></div>
+                  <h2 class="main__about-title main__about-title--icon position-relative bg-dark text-white p-2 pl-5 mb-0">О себе</h2>
+                  <div class="main__about-me mt-3 position-relative container text-justify">
+                     <div class="main__about-photo position-absolute rounded-circle bg-dark border-dark"></div>
                      <p>
                         Меня зовут Владислав, мне 20 лет. Изучаю frontend
                         технологии на протяжении года. Позиционирую себя как Junior
@@ -81,8 +81,8 @@
                   </div>
                </section>
 
-               <section class="main__ptoject tab-pane fade" id="tab-projects">
-                  <h2 class="bg-dark text-white p-2 mb-0">Проекты</h2>
+               <section class="main__ptojects tab-pane fade" id="tab-projects">
+                  <h2 class="main__projects-title main__projects-title--icon position-relative bg-dark text-white p-2 pl-5 mb-0">Проекты</h2>
    
                   <div class="container py-3">
                      <ul class="card-list list-group list-group-flush flex-md-row justify-content-center mb-0 row row-cols-md-2 row-cols-lg-3"></ul>
@@ -91,25 +91,25 @@
                
                <section class="main__contacts tab-pane fade" id="tab-contacts">
                   <div class="wrapper d-flex flex-column">
-                     <h2 class="bg-dark text-white p-2 mb-0">Контакты</h2>
+                     <h2 class="main__contacts-title main__contacts-title--icon position-relative bg-dark text-white p-2 pl-5 mb-0">Контакты</h2>
    
-                     <form class="container pb-3 my-auto" method="POST">
+                     <form class="main__contacts-form container pb-3 my-auto" method="POST">
                         <fieldset class="form-row">
                            <legend>Связь со мной:</legend>
       
-                           <p class="form-group">
-                              <label class="d-none" for="uname">Ваше имя:</label>
-                              <input class="form-control" type="text" name="user-name" id="uname" placeholder="Ваше имя:" required>
+                           <p class="form-group position-relative main__contacts-form--icon-user">
+                              <label class="d-none d-md-inline-block" for="uname">Ваше имя:</label>
+                              <input class="form-control position-relative pl-4" type="text" name="user-name" id="uname" placeholder="Ваше имя:" required>
                            </p>
       
-                           <p class="form-group">
-                              <label class="d-none" for="uemail">Ваша электронная почта:</label>
-                              <input class="form-control" type="email" name="user-email" id="uemail" placeholder="Ваша электронная почта:" required>
+                           <p class="form-group position-relative main__contacts-form--icon-email">
+                              <label class="d-none d-md-inline-block" for="uemail">Ваша электронная почта:</label>
+                              <input class="form-control position-relative pl-4" type="email" name="user-email" id="uemail" placeholder="Ваша электронная почта:" required>
                            </p>
       
-                           <p class="form-group">
-                              <label class="d-none" for="umessage">Ваше сообщение:</label>
-                              <textarea class="form-control" name="user-msg" id="umessage" cols="15" rows="5" maxlength="165" style="resize: none;" placeholder="Ваше сообщение:" required></textarea>
+                           <p class="form-group position-relative main__contacts-form--icon-msg">
+                              <label class="d-none d-md-inline-block" for="umessage">Ваше сообщение:</label>
+                              <textarea class="form-control position-relative pl-4" name="user-msg" id="umessage" cols="15" rows="5" maxlength="165" style="resize: none;" placeholder="Ваше сообщение:" required></textarea>
                            </p>
       
                            <small class="font-weight-bold text-center text-uppercase">На данный момент форма не работает!</small>
@@ -121,7 +121,7 @@
             </div>
          </main>
          
-         <footer class="bg-dark text-light p-3 d-flex align-items-center">
+         <footer class="footer bg-dark text-light p-3 d-flex align-items-center">
             <svg class="footer__logo d-none d-md-block" width="60" height="60">
                <use href="images/bag.svg#logo"></use>
             </svg>
@@ -129,7 +129,7 @@
             <div class="flex-grow-1">
                <p class="mb-2 text-center font-weight-bold">Я в соцсетях:</p>
    
-               <ul class="social-list d-flex justify-content-center list-unstyled mb-0">
+               <ul class="footer__list social-list d-flex justify-content-center list-unstyled mb-0">
                   <li class="mr-2">
                      <a class="d-block bg-light rounded-circle p-1" href="https://github.com/VladislavDesu" target="_blank">My Github
                         <svg class="social-list__icon" width="30" height="30">
