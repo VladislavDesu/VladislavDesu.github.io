@@ -1,5 +1,5 @@
 .main__home {
-   background-image: url("../images/background.jpg");
+   background-image: url("../imgmin/background.jpg");
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
@@ -83,7 +83,7 @@
    top: 0;
    left: 50%;
    margin-left: -30px;
-   background-image: url("../images/my-photo.jpg");
+   background-image: url("../imgmin/my-photo.jpg");
    background-position: center 0%;
    background-repeat: no-repeat;
    background-size: cover;
@@ -105,19 +105,19 @@
 }
 
 .main__home-title--icon::before {
-   background-image: url("../images/home-icon.svg");
+   background-image: url("../imgmin/symbols.svg#home-icon");
 }
 
 .main__about-title--icon::before {
-   background-image: url("../images/about-icon.svg");
+   background-image: url("../imgmin/about-icon.svg");
 }
 
 .main__contacts-title--icon::before {
-   background-image: url("../images/contacts-icon.svg");
+   background-image: url("../imgmin/contacts-icon.svg");
 }
 
 .main__projects-title--icon::before {
-   background-image: url("../images/projects-icon.svg");
+   background-image: url("../imgmin/projects-icon.svg");
 }
 
 .main__contacts-form--icon-user::after,
@@ -135,15 +135,15 @@
 }
 
 .main__contacts-form--icon-user::after {
-   background-image: url("../images/user-icon.svg");
+   background-image: url("../imgmin/user-icon.svg");
 }
 
 .main__contacts-form--icon-email::after {
-   background-image: url("../images/email-icon.svg");
+   background-image: url("../imgmin/email-icon.svg");
 }
 
 .main__contacts-form--icon-msg::after {
-   background-image: url("../images/msg-icon.svg");
+   background-image: url("../imgmin/msg-icon.svg");
 }
 
 @media (min-width: 768px) {
