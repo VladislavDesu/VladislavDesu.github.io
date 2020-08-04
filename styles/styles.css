@@ -35,7 +35,7 @@
 }
 
 .main__about-me {
-   padding-top: 60px;
+   padding-top: 70px;
 }
 
 .scroll-up {
@@ -174,12 +174,17 @@
    }
 
    .main__about-me {
-      padding-top: 80px;
+      padding-top: 90px;
    }
 
    .main__about-photo {
       width: 80px;
       height: 80px;
+   }
+
+   .main__contacts-form-btn {
+      width: 250px;
+      max-width: 250px;
    }
 
    .main__home-title--icon::before,
@@ -223,7 +228,7 @@
    }
 
    .main__about-me {
-      padding-top: 100px;
+      padding-top: 110px;
    }
 
    .main__about-photo {
