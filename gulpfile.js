@@ -4,22 +4,26 @@ const svgmin = require("gulp-svgmin");
 const rename = require("gulp-rename");
 const csso = require("gulp-csso");
 const minify = require("gulp-minify");
+const webp = require("gulp-webp");
 const del = require("del");
 
-
 gulp.task("minjs", () => {
-   return gulp.src("source/scripts/*.js")
-      .pipe(minify({
-         ext: {
-            min: ".min.js"
-         },
-         noSource: true
-      }))
+   return gulp
+      .src("source/scripts/*.js")
+      .pipe(
+         minify({
+            ext: {
+               min: ".min.js",
+            },
+            noSource: true,
+         })
+      )
       .pipe(gulp.dest("app/scripts/"));
 });
 
 gulp.task("mincss", () => {
-   return gulp.src("source/styles/styles.css")
+   return gulp
+      .src("source/styles/styles.css")
       .pipe(csso())
       .pipe(rename("styles.min.css"))
       .pipe(gulp.dest("app/styles/"));
@@ -41,27 +45,34 @@ gulp.task("minimages", () => {
       .pipe(gulp.dest("app/images/"));
 });
 
-gulp.task("minsvg", () => {
+gulp.task("webp", () => {
    return gulp
-      .src("source/images/**/*.svg")
-      .pipe(svgmin({
-         plugins: [{
-            cleanupIDs: false
-         }]
-      }))
-
+      .src("source/images/**/*.{png,jpg}")
+      .pipe(webp())
       .pipe(gulp.dest("app/images/"));
 });
 
+gulp.task("minsvg", () => {
+   return gulp
+      .src("source/images/**/*.svg")
+      .pipe(
+         svgmin({
+            plugins: [
+               {
+                  cleanupIDs: false,
+               },
+            ],
+         })
+      )
+
+      .pipe(gulp.dest("app/images/"));
+});
 
 gulp.task("clean", () => {
    return del("app/");
 });
 
-gulp.task("build", gulp.series(
-   "clean",
-   "mincss",
-   "minjs",
-   "minsvg",
-   "minimages"
-));
+gulp.task(
+   "build",
+   gulp.series("clean", "mincss", "minjs", "minsvg", "minimages", "webp")
+);
