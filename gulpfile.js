@@ -3,6 +3,7 @@ const imagemin = require("gulp-imagemin");
 const svgmin = require("gulp-svgmin");
 const rename = require("gulp-rename");
 const csso = require("gulp-csso");
+const autoprefixer = require('gulp-autoprefixer');
 const minify = require("gulp-minify");
 const webp = require("gulp-webp");
 const del = require("del");
@@ -25,6 +26,7 @@ gulp.task("mincss", () => {
    return gulp
       .src("source/styles/styles.css")
       .pipe(csso())
+      .pipe(autoprefixer())
       .pipe(rename("styles.min.css"))
       .pipe(gulp.dest("app/styles/"));
 });
@@ -47,9 +49,9 @@ gulp.task("minimages", () => {
 
 gulp.task("webp", () => {
    return gulp
-      .src("source/images/**/*.{png,jpg}")
+      .src("source/images/cards/**/*.{png,jpg}")
       .pipe(webp())
-      .pipe(gulp.dest("app/images/"));
+      .pipe(gulp.dest("app/images/cards/"));
 });
 
 gulp.task("minsvg", () => {
@@ -57,11 +59,9 @@ gulp.task("minsvg", () => {
       .src("source/images/**/*.svg")
       .pipe(
          svgmin({
-            plugins: [
-               {
-                  cleanupIDs: false,
-               },
-            ],
+            plugins: [{
+               cleanupIDs: false,
+            }, ],
          })
       )
 
