@@ -1,3 +1,5 @@
+"use strict";
+
 const scrollUp = document.querySelector(".scroll-up");
 
 
