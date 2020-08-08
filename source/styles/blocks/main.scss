@@ -1,10 +1,3 @@
-.main__home {
-   background-image: url("../images/background.jpg");
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-position: center;
-}
-
 .main__home-hello {
    font-size: 5rem;
 }
@@ -14,67 +7,13 @@
    font-size: 1.7rem;
 }
 
-.wrapper,
 .main__home {
    height: 100%;
    min-height: 100%;
 }
 
-.social-list {
-   font-size: 0;
-}
-
-.footer__logo {
-   fill: white;
-}
-
-.header__logo,
-.footer__logo {
-   width: 60px;
-   height: 60px;
-}
-
 .main__about-me {
    padding-top: 70px;
-}
-
-.scroll-up {
-   width: 50px;
-   height: 50px;
-   bottom: 150px;
-   right: 10vw;
-   opacity: 0;
-}
-
-.opacity-on {
-   animation-name: opacity-on;
-   animation-duration: 1s;
-   animation-iteration-count: 1;
-   animation-fill-mode: forwards;
-}
-
-.opacity-off {
-   animation-name: opacity-off;
-   animation-duration: 1s;
-   animation-iteration-count: 1;
-   animation-fill-mode: forwards;
-}
-
-.scroll-up::before {
-   content: "";
-   position: absolute;
-   width: 20px;
-   height: 20px;
-   bottom: 5px;
-   right: 15px;
-   border-top: 4px solid #ffffff;
-   border-right: 4px solid #ffffff;
-   animation-name: arrow-up;
-   animation-duration: 1.8s;
-   animation-iteration-count: infinite;
-   animation-fill-mode: forwards;
-   transform-origin: center;
-   transform: rotate(-45deg);
 }
 
 .main__about-photo {
@@ -147,18 +86,6 @@
 }
 
 @media (min-width: 768px) {
-
-   body,
-   html {
-      font-size: 17px;
-   }
-
-   .header__logo,
-   .footer__logo {
-      width: 65px;
-      height: 65px;
-   }
-
    .main__home-hello {
       font-size: 6rem;
    }
@@ -202,95 +129,5 @@
       height: 18px;
       top: 45px;
       left: 6px;
-   }
-
-   .table-sm th,
-   .table-sm td {
-      padding: .75rem;
-   }
-}
-
-@media (min-width: 992px) {
-
-   body,
-   html {
-      font-size: 18px;
-   }
-
-   .header__logo,
-   .footer__logo {
-      width: 70px;
-      height: 70px;
-   }
-
-   .main__home-hello {
-      font-size: 6.5rem;
-   }
-
-   .main__home-name,
-   .main__home-dev {
-      font-size: 3rem;
-   }
-
-   .main__about-me {
-      padding-top: 110px;
-   }
-
-   .main__about-photo {
-      width: 100px;
-      height: 100px;
-   }
-
-   .main__home-title--icon::before,
-   .main__about-title--icon::before,
-   .main__projects-title--icon::before,
-   .main__contacts-title--icon::before {
-      width: 30px;
-      height: 30px;
-   }
-
-   .main__contacts-form--icon-user::after,
-   .main__contacts-form--icon-email::after,
-   .main__contacts-form--icon-msg::after {
-      width: 20px;
-      height: 20px;
-      top: 48px;
-      left: 5px;
-   }
-}
-
-@keyframes arrow-up {
-   100% {
-      opacity: 0;
-      transform: translateY(-15px) rotate(-45deg);
-   }
-
-   0% {
-      opacity: 0;
-   }
-
-   20% {
-      opacity: 1;
-   }
-
-}
-
-@keyframes opacity-on {
-   0% {
-      opacity: 0;
-   }
-
-   100% {
-      opacity: 1;
-   }
-}
-
-@keyframes opacity-off {
-   0% {
-      opacity: 1;
-   }
-
-   100% {
-      opacity: 0;
    }
 }
