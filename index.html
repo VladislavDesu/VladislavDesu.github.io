@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="h-100">
+<html lang="ru">
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,43 +10,35 @@
       <title>Me Portfolio</title>
    </head>
 
-   <body class="h-100">
-      <div class="d-flex flex-column wrapper position-relative">
-         <header class="header bg-white text-dark">
-            <nav class="navbar navbar-expand-md navbar-light">
-               <svg class="header__logo" width="60" height="60">
-                  <use href="app/images/bag.svg#logo"></use>
-               </svg>
+   <body>
+      <div class="wrapper position-relative d-flex flex-column">
+         <header>
+            <nav class="main-nav position-relative">
+               <button class="main-nav__btn d-md-none" type="button"aria-label="Open"></button>
 
-               <button class="navbar-toggler" type="button" data-toggle="collapse" aria-label="открыть меню" data-target="#collapsibleNavbar">
-                  <span class="navbar-toggler-icon"></span>
-               </button>
+               <ul class="main-nav__list nav flex-column flex-md-row flex-fill justify-content-center p-md-2">
+                  <li class="nav-item mb-2 mr-md-3 mb-md-0">
+                     <a class="nav-link active" data-toggle="pill" href="#tab-main">Главная</a>
+                  </li>
 
-               <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
-                  <ul class="nav nav-pills text-dark text-center flex-column flex-md-row font-weight-bold text-uppercase">
-                     <li class="nav-item mr-md-3">
-                        <a class="nav-link active" data-toggle="pill" href="#tab-main">Главная</a>
-                     </li>
+                  <li class="nav-item mb-2 mr-md-3 mb-md-0">
+                     <a class="nav-link" data-toggle="pill" href="#tab-about-me">О себе</a>
+                  </li>
 
-                     <li class="nav-item mr-md-3">
-                        <a class="nav-link" data-toggle="pill" href="#tab-about-me">О себе</a>
-                     </li>
+                  <li class="nav-item mb-2 mr-md-3 mb-md-0">
+                     <a class="nav-link" data-toggle="pill" href="#tab-projects">Проекты</a>
+                  </li>
 
-                     <li class="nav-item mr-md-3">
-                        <a class="nav-link" data-toggle="pill" href="#tab-projects">Проекты</a>
-                     </li>
-
-                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="pill" href="#tab-contacts">Контакты</a>
-                     </li>
-                  </ul>
-               </div>
+                  <li class="nav-item">
+                     <a class="nav-link" data-toggle="pill" href="#tab-contacts">Контакты</a>
+                  </li>
+               </ul>
             </nav>
          </header>
 
-         <main class="main bg-white text-dark d-flex flex-grow-1">
+         <main class="main d-flex flex-grow-1">
             <div class="tab-content d-flex flex-column flex-grow-1">
-               <section class="main__home bg-dark text-light tab-pane fade show active" id="tab-main">
+               <section class="main__home tab-pane fade show active" id="tab-main">
                   <div class="wrapper d-flex flex-column">
                      <h2 class="main__home-title main__home-title--icon position-relative bg-dark text-white p-2 pl-5 mb-0">Главная</h2>
 
@@ -61,7 +53,7 @@
                <section class="main__about tab-pane fade" id="tab-about-me">
                   <h2 class="main__about-title main__about-title--icon position-relative bg-dark text-white p-2 pl-5 mb-0">О себе</h2>
                   <div class="main__about-me mt-3 position-relative container text-justify">
-                     <div class="main__about-photo position-absolute rounded-circle bg-dark border-dark"></div>
+                     <div class="main__about-photo position-absolute rounded-circle bg-dark"></div>
 
                      <p>
                         Меня зовут Владислав, мне 20 лет. Изучаю front-end
@@ -79,60 +71,51 @@
                      </p>
 
                      
-                     <div class="dropdown mb-3">
-                        <small class="d-block">*Больше информации обо мне можно прочитать в моем резюме</small>
-                        <a class="btn btn-secondary btn-sm dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                           Скачать резюме
-                        </a>
-                      
-                        <div class="dropdown-menu p-0" aria-labelledby="dropdownMenuLink">
-                           <table class="table table-striped mb-0 border-top-0 table-sm">
-                              <thead>
-                                 <tr>
-                                    <th class="border-top-0" scope="col">#</th>
-                                    <th class="border-top-0" scope="col">резюме</th>
-                                    <th class="border-top-0" scope="col">Формат</th>
-                                    <th class="border-top-0" scope="col">Язык</th>
-                                    <th class="border-top-0" scope="col">Скачать</th>
-                                 </tr>
-                              </thead>
-      
-                              <tbody>
-                                 <tr>
-                                    <th scope="row">1</th>
-                                    <td>резюме</td>
-                                    <td>pdf</td>
-                                    <td>ru</td>
-                                    <td><a href="resume/Vladislav_Gryadko-resume-ru.pdf" download>Скачать</a></td>
-                                 </tr>
-                                 
-                                 <tr>
-                                    <th scope="row">2</th>
-                                    <td>resume</td>
-                                    <td>pdf</td>
-                                    <td>en</td>
-                                    <td><a href="resume/Vladislav_Gryadko-resume-en.pdf" download>Скачать</a></td>
-                                 </tr>
-      
-                                 <tr>
-                                    <th scope="row">3</th>
-                                    <td>резюме</td>
-                                    <td>docx</td>
-                                    <td>ru</td>
-                                    <td><a href="resume/Vladislav_Gryadko-resume-ru.docx" download>Скачать</a></td>
-                                 </tr>
-      
-                                 <tr>
-                                    <th scope="row">4</th>
-                                    <td>resume</td>
-                                    <td>docx</td>
-                                    <td>en</td>
-                                    <td><a href="resume/Vladislav_Gryadko-resume-en.docx" download>Скачать</a></td>
-                                 </tr>
-                              </tbody>
-                           </table>
-                        </div>
-                      </div>
+                     <table class="table table-striped mb-0 border-top-0 table-sm">
+                        <thead>
+                           <tr>
+                              <th class="border-top-0" scope="col">#</th>
+                              <th class="border-top-0" scope="col">резюме</th>
+                              <th class="border-top-0" scope="col">Формат</th>
+                              <th class="border-top-0" scope="col">Язык</th>
+                              <th class="border-top-0" scope="col">Скачать</th>
+                           </tr>
+                        </thead>
+
+                        <tbody>
+                           <tr>
+                              <th scope="row">1</th>
+                              <td>резюме</td>
+                              <td>pdf</td>
+                              <td>ru</td>
+                              <td><a href="resume/Vladislav_Gryadko-resume-ru.pdf" download>Скачать</a></td>
+                           </tr>
+                           
+                           <tr>
+                              <th scope="row">2</th>
+                              <td>resume</td>
+                              <td>pdf</td>
+                              <td>en</td>
+                              <td><a href="resume/Vladislav_Gryadko-resume-en.pdf" download>Скачать</a></td>
+                           </tr>
+
+                           <tr>
+                              <th scope="row">3</th>
+                              <td>резюме</td>
+                              <td>docx</td>
+                              <td>ru</td>
+                              <td><a href="resume/Vladislav_Gryadko-resume-ru.docx" download>Скачать</a></td>
+                           </tr>
+
+                           <tr>
+                              <th scope="row">4</th>
+                              <td>resume</td>
+                              <td>docx</td>
+                              <td>en</td>
+                              <td><a href="resume/Vladislav_Gryadko-resume-en.docx" download>Скачать</a></td>
+                           </tr>
+                        </tbody>
+                     </table>
                   </div>
                </section>
 
@@ -148,71 +131,36 @@
                   <div class="wrapper d-flex flex-column">
                      <h2 class="main__contacts-title main__contacts-title--icon position-relative bg-dark text-white p-2 pl-5 mb-0">Контакты</h2>
 
-                     <form class="main__contacts-form container pb-3 my-auto" method="POST">
-                        <fieldset class="form-row flex-column">
-                           <legend>Связь со мной:</legend>
-
-                           <p class="form-group position-relative main__contacts-form--icon-user">
-                              <label class="d-none d-md-inline-block" for="uname">Ваше имя:</label>
-                              <input class="form-control position-relative pl-4" type="text" name="user-name" id="uname" placeholder="Ваше имя:" required>
-                           </p>
-
-                           <p class="form-group position-relative main__contacts-form--icon-email">
-                              <label class="d-none d-md-inline-block" for="uemail">Ваша электронная почта:</label>
-                              <input class="form-control position-relative pl-4" type="email" name="user-email" id="uemail" placeholder="Ваша электронная почта:" required>
-                           </p>
-
-                           <p class="form-group position-relative main__contacts-form--icon-msg">
-                              <label class="d-none d-md-inline-block" for="umessage">Ваше сообщение:</label>
-                              <textarea class="form-control position-relative pl-4" name="user-msg" id="umessage" cols="15" rows="5" maxlength="165" style="resize: none;" placeholder="Ваше сообщение:" required></textarea>
-                           </p>
-
-                           <small class="font-weight-bold text-center text-uppercase">На данный момент форма не работает!</small>
-                           <button type="submit" class="main__contacts-form-btn btn btn-primary btn-block mx-auto" disabled>Отправить</button>
-                        </fieldset>
-                     </form>
-                  </div>
+                     <ul class="social-list d-flex justify-content-center list-unstyled mb-0">
+                        <li class="mr-2">
+                           <a class="d-block bg-light text-dark rounded-circle p-1" href="https://github.com/VladislavDesu" rel="noopener" target="_blank">My Github
+                              <svg class="social-list__icon" width="30" height="30">
+                                 <use href="app/images/github-icon.svg#github"></use>
+                              </svg>
+                           </a>
+                        </li>
+      
+                        <li class="mr-2">
+                           <a class="d-block bg-light text-dark rounded-circle p-1" href="https://www.linkedin.com/in/vladislav-gryadko/" rel="noopener" target="_blank">My LinkedIn
+                              <svg class="social-list__icon" width="30" height="30">
+                                 <use href="app/images/linkedin-icon.svg#linkedin"></use>
+                              </svg>
+                           </a>
+                        </li>
+      
+                        <li>
+                           <a class="d-block bg-light text-dark rounded-circle p-1" href="https://t.me/VladislavDesu" rel="noopener" target="_blank">My Telegram
+                              <svg class="social-list__icon" width="30" height="30">
+                                 <use href="app/images/telegram-icon.svg#telegram"></use>
+                              </svg>
+                           </a>
+                        </li>
+                     </ul>
                </section>
             </div>
          </main>
 
-         <footer class="footer bg-dark text-light p-3 d-flex align-items-center">
-            <svg class="footer__logo d-none d-md-block" width="60" height="60">
-               <use href="app/images/bag.svg#logo"></use>
-            </svg>
-
-            <div class="flex-grow-1">
-               <p class="mb-2 text-center font-weight-bold">Я в соцсетях:</p>
-
-               <ul class="footer__list social-list d-flex justify-content-center list-unstyled mb-0">
-                  <li class="mr-2">
-                     <a class="d-block bg-light text-dark rounded-circle p-1" href="https://github.com/VladislavDesu" rel="noopener" target="_blank">My Github
-                        <svg class="social-list__icon" width="30" height="30">
-                           <use href="app/images/github-icon.svg#github"></use>
-                        </svg>
-                     </a>
-                  </li>
-
-                  <li class="mr-2">
-                     <a class="d-block bg-light text-dark rounded-circle p-1" href="https://www.linkedin.com/in/vladislav-gryadko/" rel="noopener" target="_blank">My LinkedIn
-                        <svg class="social-list__icon" width="30" height="30">
-                           <use href="app/images/linkedin-icon.svg#linkedin"></use>
-                        </svg>
-                     </a>
-                  </li>
-
-                  <li>
-                     <a class="d-block bg-light text-dark rounded-circle p-1" href="https://t.me/VladislavDesu" rel="noopener" target="_blank">My Telegram
-                        <svg class="social-list__icon" width="30" height="30">
-                           <use href="app/images/telegram-icon.svg#telegram"></use>
-                        </svg>
-                     </a>
-                  </li>
-               </ul>
-            </div>
-         </footer>
-
-         <a class="scroll-up position-fixed bg-dark rounded-circle" aria-label="Скролл наверх"></a>
+         <a class="scrollup position-fixed bg-dark rounded-circle" aria-label="Скролл наверх"></a>
       </div>
 
       <template id="list-item-card">
@@ -236,5 +184,6 @@
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
       <script src="app/scripts/cards.min.js"></script>
       <script src="app/scripts/scrollup.min.js"></script>
+      <script src="app/scripts/menu.min.js"></script>
    </body>
 </html>
