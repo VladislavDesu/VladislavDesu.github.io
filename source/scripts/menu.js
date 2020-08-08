@@ -1,6 +1,6 @@
-const mainNav = document.querySelector(".main-nav");
-const btnClose = mainNav.querySelector(".main-nav__btn");
+const nav = document.querySelector(".navigation");
+const navBtn = nav.querySelector(".navigation__btn");
 
-btnClose.addEventListener("click", (e) => {
-   btnClose.classList.toggle("main-nav__btn--closed");
+navBtn.addEventListener("click", (e) => {
+   navBtn.classList.toggle("navigation__btn--closed");
 });
