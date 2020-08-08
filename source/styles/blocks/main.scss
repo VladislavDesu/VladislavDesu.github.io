@@ -1,3 +1,43 @@
+.main__title {
+   position: relative;
+   margin-bottom: 0;
+   color: #ffffff;
+
+   &::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 13px;
+      width: 25px;
+      height: 25px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+   }
+
+   &--home::before {
+      background-image: url("../images/home-icon.svg");
+   }
+
+   &--about-me::before {
+      background-image: url("../images/about-icon.svg");
+   }
+
+   &--projects::before {
+      background-image: url("../images/projects-icon.svg");
+   }
+
+   &--contacts::before {
+      background-image: url("../images/contacts-icon.svg");
+   }
+}
+
+.main__home-text {
+   font-weight: 700;
+   text-transform: capitalize;
+   text-align: center;
+}
+
 .main__home-hello {
    font-size: 5rem;
 }
@@ -7,127 +47,32 @@
    font-size: 1.7rem;
 }
 
-.main__home {
-   height: 100%;
-   min-height: 100%;
-}
-
-.main__about-me {
-   padding-top: 70px;
+.main__home-cv {
+   font-size: 1.2rem;
 }
 
 .main__about-photo {
-   width: 60px;
-   height: 60px;
-   top: 0;
-   left: 50%;
-   margin-left: -30px;
-   background-image: url("../images/my-photo.jpg");
-   background-position: center 0%;
-   background-repeat: no-repeat;
-   background-size: cover;
+   width: 65px;
+   height: 65px;
+   margin-right: 10px;
+   border-radius: 50%;
+   object-fit: cover;
+   object-position: top;
 }
 
-.main__home-title--icon::before,
-.main__about-title--icon::before,
-.main__projects-title--icon::before,
-.main__contacts-title--icon::before {
-   content: "";
-   position: absolute;
-   top: 15px;
-   left: 13px;
-   width: 25px;
-   height: 25px;
-   background-position: center;
-   background-size: cover;
-   background-repeat: no-repeat;
+.main__about-name {
+   font-size: 1.5rem;
 }
 
-.main__home-title--icon::before {
-   background-image: url("../images/home-icon.svg");
+.main__about-dev {
+   font-size: 1.2rem;
 }
 
-.main__about-title--icon::before {
-   background-image: url("../images/about-icon.svg");
+.main__about-text {
+   margin-bottom: 0;
+   padding: 20px;
 }
 
-.main__contacts-title--icon::before {
-   background-image: url("../images/contacts-icon.svg");
-}
-
-.main__projects-title--icon::before {
-   background-image: url("../images/projects-icon.svg");
-}
-
-.main__contacts-form--icon-user::after,
-.main__contacts-form--icon-email::after,
-.main__contacts-form--icon-msg::after {
-   content: "";
-   position: absolute;
-   left: 6px;
-   top: 12px;
-   width: 15px;
-   height: 15px;
-   background-position: center;
-   background-size: cover;
-   background-repeat: no-repeat;
-}
-
-.main__contacts-form--icon-user::after {
-   background-image: url("../images/user-icon.svg");
-}
-
-.main__contacts-form--icon-email::after {
-   background-image: url("../images/email-icon.svg");
-}
-
-.main__contacts-form--icon-msg::after {
-   background-image: url("../images/msg-icon.svg");
-}
-
-@media (min-width: 768px) {
-   .main__home-hello {
-      font-size: 6rem;
-   }
-
-   .main__home-name,
-   .main__home-dev {
-      font-size: 2.2rem;
-   }
-
-   .social-list__icon {
-      width: 35px;
-      height: 35px;
-   }
-
-   .main__about-me {
-      padding-top: 90px;
-   }
-
-   .main__about-photo {
-      width: 80px;
-      height: 80px;
-   }
-
-   .main__contacts-form-btn {
-      width: 250px;
-      max-width: 250px;
-   }
-
-   .main__home-title--icon::before,
-   .main__about-title--icon::before,
-   .main__projects-title--icon::before,
-   .main__contacts-title--icon::before {
-      width: 28px;
-      height: 28px;
-   }
-
-   .main__contacts-form--icon-user::after,
-   .main__contacts-form--icon-email::after,
-   .main__contacts-form--icon-msg::after {
-      width: 18px;
-      height: 18px;
-      top: 45px;
-      left: 6px;
-   }
+.main__about-list {
+   margin-bottom: 0;
 }
