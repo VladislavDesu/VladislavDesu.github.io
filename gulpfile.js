@@ -40,7 +40,8 @@ gulp.task("js", () => {
             noSource: true,
          })
       )
-      .pipe(gulp.dest("app/scripts/"));
+      .pipe(gulp.dest("app/scripts/"))
+      .pipe(server.stream());
 });
 
 gulp.task("image", () => {
@@ -92,6 +93,7 @@ gulp.task("serve", () => {
 
    gulp.watch("source/styles/**/*.scss", gulp.series("style"));
    gulp.watch("index.html", gulp.series("html"));
+   gulp.watch("source/scripts/**/*.js", gulp.series("js"));
 });
 
 gulp.task("clean", () => {
