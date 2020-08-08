@@ -1,14 +1,35 @@
-const gulp = require("gulp");
-const imagemin = require("gulp-imagemin");
-const svgmin = require("gulp-svgmin");
-const rename = require("gulp-rename");
-const csso = require("gulp-csso");
-const autoprefixer = require('gulp-autoprefixer');
-const minify = require("gulp-minify");
-const webp = require("gulp-webp");
-const del = require("del");
+const gulp = require("gulp"),
+   server = require("browser-sync").create(),
+   scss = require("gulp-sass"),
+   plumber = require("gulp-plumber"),
+   csso = require("gulp-csso"),
+   minify = require("gulp-minify"),
+   rename = require("gulp-rename"),
+   imagemin = require("gulp-imagemin"),
+   svgmin = require("gulp-svgmin"),
+   webp = require("gulp-webp"),
+   postcss = require("gulp-postcss"),
+   autoprefixer = require("autoprefixer"),
+   del = require("del");
 
-gulp.task("minjs", () => {
+gulp.task("style", () => {
+   return gulp
+      .src("source/styles/styles.scss")
+      .pipe(plumber())
+      .pipe(
+         scss({
+            outputStyle: "expanded",
+         }).on("error", scss.logError)
+      )
+      .pipe(postcss([autoprefixer()]))
+      .pipe(gulp.dest("app/styles/"))
+      .pipe(csso())
+      .pipe(rename("styles.min.css"))
+      .pipe(gulp.dest("app/styles/"))
+      .pipe(server.stream());
+});
+
+gulp.task("js", () => {
    return gulp
       .src("source/scripts/*.js")
       .pipe(
@@ -22,16 +43,7 @@ gulp.task("minjs", () => {
       .pipe(gulp.dest("app/scripts/"));
 });
 
-gulp.task("mincss", () => {
-   return gulp
-      .src("source/styles/styles.css")
-      .pipe(csso())
-      .pipe(autoprefixer())
-      .pipe(rename("styles.min.css"))
-      .pipe(gulp.dest("app/styles/"));
-});
-
-gulp.task("minimages", () => {
+gulp.task("image", () => {
    return gulp
       .src("source/images/**/*.{png,jpg}")
       .pipe(
@@ -54,25 +66,36 @@ gulp.task("webp", () => {
       .pipe(gulp.dest("app/images/cards/"));
 });
 
-gulp.task("minsvg", () => {
+gulp.task("svg", () => {
    return gulp
       .src("source/images/**/*.svg")
       .pipe(
          svgmin({
-            plugins: [{
-               cleanupIDs: false,
-            }, ],
+            plugins: [
+               {
+                  cleanupIDs: false,
+               },
+            ],
          })
       )
-
       .pipe(gulp.dest("app/images/"));
+});
+
+gulp.task("html", () => {
+   return gulp.src("index.html").pipe(server.stream());
+});
+
+gulp.task("serve", () => {
+   server.init({
+      server: "./",
+   });
+
+   gulp.watch("source/styles/**/*.scss", gulp.series("style"));
+   gulp.watch("index.html", gulp.series("html"));
 });
 
 gulp.task("clean", () => {
    return del("app/");
 });
 
-gulp.task(
-   "build",
-   gulp.series("clean", "mincss", "minjs", "minsvg", "minimages", "webp")
-);
+gulp.task("build", gulp.series("clean", "style", "js", "svg", "image", "webp"));
