@@ -1,17 +1,17 @@
 "use strict";
 
-const scrollUp = document.querySelector(".scroll-up");
+const scrollUp = document.querySelector(".scrollup");
 
 
 window.addEventListener("scroll", (e) => {
    e.preventDefault();
 
    if (window.pageYOffset > 100) {
-      scrollUp.classList.add("opacity-on");
-      scrollUp.classList.remove("opacity-off");
+      scrollUp.classList.add("scrollup--show");
+      scrollUp.classList.remove("scrollup--hide");
    } else {
-      scrollUp.classList.add("opacity-off");
-      scrollUp.classList.remove("opacity-on");
+      scrollUp.classList.add("scrollup--hide");
+      scrollUp.classList.remove("scrollup--show");
    }
 });
 
