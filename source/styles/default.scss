@@ -2,37 +2,3 @@ html,
 body {
    height: 100vh;
 }
-
-.wrapper {
-   height: 100%;
-   min-height: 100%;
-}
-
-.nav-link.active {
-   color: #003f84;
-}
-
-.social-list {
-   font-size: 0;
-}
-
-@media (min-width: 768px) {
-
-   body,
-   html {
-      font-size: 17px;
-   }
-
-   .table-sm th,
-   .table-sm td {
-      padding: .75rem;
-   }
-}
-
-@media (min-width: 992px) {
-
-   body,
-   html {
-      font-size: 18px;
-   }
-}
