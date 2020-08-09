@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="linkedin" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 600 600" style="enable-background:new 0 0 600 600;" xml:space="preserve">
-<path d="M515.9,515.9L515.9,515.9L515.9,515.9l0.1-158.5c0-77.5-16.7-137.2-107.4-137.2c-43.5,0-72.8,23.9-84.7,46.5h-1.2v-39.2h-86
-	v288.4h89.5V373.2c0-37.7,7.1-73.9,53.7-73.9c45.9,0,46.5,42.9,46.5,76.4V516L515.9,515.9z"/>
-<path d="M91.1,227.5h89.5v288.4H91.1V227.5z"/>
-<path d="M135.8,84C107.2,84,84,107.2,84,135.8s23.2,52.3,51.8,52.3s51.8-23.7,51.8-52.3S164.4,84,135.8,84z"/>
-</svg>
+<svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+   <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+      stroke-width="2" d="M3 16L13 16 13 35.665 13 45 3 45z" />
+   <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+      stroke-width="1.976" d="M8,12L8,12c-3,0-5-1.813-5-4.053S5,4,8,4s4.875,1.707,5,3.947C13,10.187,11.125,12,8,12z" />
+   <path fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10"
+      stroke-width="2"
+      d="M37,28.5c0-2.485-2.015-4.5-4.5-4.5S28,26.015,28,28.5c0,0,0,0.125,0,0.25c0,0.125,0,0.25,0,0.25c0,1.291,0,16,0,16H18V16h10v3.639c0,0,3.27-3.639,8.787-3.639C42.422,16,47,20.135,47,28v17H37C37,45,37,29.557,37,28.5" />
+   </svg>
