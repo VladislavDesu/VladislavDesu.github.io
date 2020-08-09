@@ -62,9 +62,9 @@ gulp.task("image", () => {
 
 gulp.task("webp", () => {
    return gulp
-      .src("source/images/cards/**/*.{png,jpg}")
+      .src("source/images/*.{png,jpg}")
       .pipe(webp())
-      .pipe(gulp.dest("app/images/cards/"));
+      .pipe(gulp.dest("app/images/webp/"));
 });
 
 gulp.task("svg", () => {
