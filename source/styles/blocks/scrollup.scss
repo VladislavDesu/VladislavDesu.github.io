@@ -82,3 +82,23 @@
       animation-fill-mode: forwards;
    }
 }
+
+@media (min-width: 768px) {
+   .scrollup {
+      width: 40px;
+      height: 50px;
+
+      &::before {
+         top: 8px;
+         right: 23px;
+         border: 17px solid #2b2b2b;
+      }
+
+      &::after {
+         right: 13px;
+         width: 20px;
+         height: 20px;
+      }
+   }
+   
+}
