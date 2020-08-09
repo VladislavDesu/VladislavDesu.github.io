@@ -22,6 +22,10 @@ body {
   border-bottom: 0;
 }
 
+.navigation__list a {
+  color: #0055b1;
+}
+
 .navigation__btn {
   position: absolute;
   top: 0;
@@ -141,7 +145,7 @@ body {
 }
 
 .main__about-dev {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 .main__about-text {
