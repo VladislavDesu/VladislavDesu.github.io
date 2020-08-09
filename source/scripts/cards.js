@@ -3,8 +3,8 @@
 const cards = [
    {
       img: {
-         webp: "app/images/cards/sedona.webp",
-         png: "app/images/cards/sedona.png"
+         webp: "app/images/webp/sedona.webp",
+         png: "app/images/sedona.png"
       },
       title: "Sedona",
       desc: "",
@@ -12,8 +12,8 @@ const cards = [
    },
    {
       img: {
-         webp: "app/images/cards/gllacy.webp",
-         png: "app/images/cards/gllacy.png"
+         webp: "app/images/webp/gllacy.webp",
+         png: "app/images/gllacy.png"
       },
       title: "Gllacy",
       desc: "",
@@ -21,8 +21,8 @@ const cards = [
    },
    {
       img: {
-         webp: "app/images/cards/nerds.webp",
-         png: "app/images/cards/nerds.png"
+         webp: "app/images/webp/nerds.webp",
+         png: "app/images/nerds.png"
       },
       title: "Nerds",
       desc: "",
@@ -30,8 +30,8 @@ const cards = [
    },
    {
       img: {
-         webp: "app/images/cards/catenergy.webp",
-         png: "app/images/cards/catenergy.png"
+         webp: "app/images/webp/catenergy.webp",
+         png: "app/images/catenergy.png"
       },
       title: "Cat Energy",
       desc: "",
@@ -39,8 +39,8 @@ const cards = [
    },
    {
       img: {
-         webp: "app/images/cards/covid.webp",
-         png: "app/images/cards/covid.png"
+         webp: "app/images/webp/covid.webp",
+         png: "app/images/covid.png"
       },
       title: "COVID-19",
       desc: "",
@@ -48,8 +48,8 @@ const cards = [
    },
    {
       img: {
-         webp: "app/images/cards/mogo.webp",
-         png: "app/images/cards/mogo.png"
+         webp: "app/images/webp/mogo.webp",
+         png: "app/images/mogo.png"
       },
       title: "MoGo",
       desc: "",
@@ -57,8 +57,8 @@ const cards = [
    },
    {
       img: {
-         webp: "app/images/cards/misocial.webp",
-         png: "app/images/cards/misocial.png"
+         webp: "app/images/webp/misocial.webp",
+         png: "app/images/misocial.png"
       },
       title: "Misocial",
       desc: "",
@@ -66,8 +66,8 @@ const cards = [
    },
    {
       img: {
-         webp: "app/images/cards/kvast.webp",
-         png: "app/images/cards/kvast.png"
+         webp: "app/images/webp/kvast.webp",
+         png: "app/images/kvast.png"
       },
       title: "Kvast",
       desc: "",
@@ -75,8 +75,8 @@ const cards = [
    },
    {
       img: {
-         webp: "app/images/cards/conference.webp",
-         png: "app/images/cards/conference.png"
+         webp: "app/images/webp/conference.webp",
+         png: "app/images/conference.png"
       },
       title: "Styles Conference",
       desc: "",
@@ -84,8 +84,8 @@ const cards = [
    },
    {
       img: {
-         webp: "app/images/cards/company.webp",
-         png: "app/images/cards/company.png"
+         webp: "app/images/webp/company.webp",
+         png: "app/images/company.png"
       },
       title: "My Company",
       desc: "",
