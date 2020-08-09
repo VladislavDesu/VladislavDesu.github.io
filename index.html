@@ -54,8 +54,11 @@
 
             <header class="main__about-header container py-3">
                <div class="d-flex align-items-center mb-2">
-                  <img class="main__about-photo img-fluid" src="app/images/my-photo.jpg" width="288" height="385"
+                  <picture>
+                     <source srcset="app/images/webp/my-photo.webp">
+                     <img class="main__about-photo img-fluid" src="app/images/my-photo.jpg" width="288" height="385"
                      alt="photo with me">
+                  </picture>
 
                   <div class="d-flex flex-column">
                      <span class="main__about-name">Vladislav Gryadko</span>
