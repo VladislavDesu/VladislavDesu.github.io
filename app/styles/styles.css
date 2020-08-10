@@ -499,3 +499,12 @@ body {
     display: none;
   }
 }
+
+.nojs .header__navigation {
+  display: none;
+}
+
+.nojs .tab-content > .fade {
+  display: block;
+  opacity: 1;
+}
