@@ -3,6 +3,24 @@
 const cards = [
    {
       img: {
+         webp: "app/images/webp/project-two.webp",
+         png: "app/images/project-two.png"
+      },
+      title: "Project Two",
+      desc: "",
+      link: "/project-two",
+   },
+   {
+      img: {
+         webp: "app/images/webp/project-one.webp",
+         png: "app/images/project-one.png"
+      },
+      title: "Project One",
+      desc: "",
+      link: "/project-one",
+   },
+   {
+      img: {
          webp: "app/images/webp/sedona.webp",
          png: "app/images/sedona.png"
       },
@@ -27,6 +45,15 @@ const cards = [
       title: "Nerds",
       desc: "",
       link: "/nerds",
+   },
+   {
+      img: {
+         webp: "app/images/webp/borodinski.webp",
+         png: "app/images/borodinski.png"
+      },
+      title: "Borodinski",
+      desc: "",
+      link: "/borodinski",
    },
    {
       img: {
