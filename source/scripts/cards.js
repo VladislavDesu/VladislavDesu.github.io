@@ -3,6 +3,24 @@
 const cards = [
    {
       img: {
+         webp: "app/images/webp/pulse.webp",
+         png: "app/images/pulse.png"
+      },
+      title: "Pulse",
+      desc: "",
+      link: "/pulse",
+   },
+   {
+      img: {
+         webp: "app/images/webp/alexis.webp",
+         png: "app/images/alexis.png"
+      },
+      title: "Alexis",
+      desc: "",
+      link: "/alexis",
+   },
+   {
+      img: {
          webp: "app/images/webp/project-two.webp",
          png: "app/images/project-two.png"
       },
