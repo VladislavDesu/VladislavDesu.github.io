@@ -44,7 +44,7 @@ const cards = [
       },
       title: "Sedona",
       desc: "",
-      link: "/sedona",
+      link: "app/sedona",
    },
    {
       img: {
