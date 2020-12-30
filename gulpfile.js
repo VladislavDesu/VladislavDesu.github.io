@@ -1,103 +1,178 @@
 const gulp = require("gulp"),
-   server = require("browser-sync").create(),
-   scss = require("gulp-sass"),
-   plumber = require("gulp-plumber"),
-   csso = require("gulp-csso"),
-   minify = require("gulp-minify"),
-   rename = require("gulp-rename"),
-   imagemin = require("gulp-imagemin"),
-   svgmin = require("gulp-svgmin"),
-   webp = require("gulp-webp"),
    postcss = require("gulp-postcss"),
    autoprefixer = require("autoprefixer"),
-   del = require("del");
+   mqpacker = require("css-mqpacker"),
+   browserSync = require("browser-sync"),
+   htmlmin = require("gulp-htmlmin"),
+   posthtml = require("gulp-posthtml"),
+   include = require("posthtml-include"),
+   csso = require("gulp-csso"),
+   scss = require("gulp-sass"),
+   sourcemaps = require("gulp-sourcemaps"),
+   imagemin = require("gulp-imagemin"),
+   webp = require("gulp-webp"),
+   svgmin = require("gulp-svgmin"),
+   plumber = require("gulp-plumber"),
+   ttf2woff = require("gulp-ttf2woff"),
+   ttf2woff2 = require("gulp-ttf2woff2"),
+   uglify = require("gulp-uglify"),
+   clean = require("gulp-clean"),
+   rename = require("gulp-rename");
 
-gulp.task("style", () => {
-   return gulp
-      .src("source/styles/styles.scss")
-      .pipe(plumber())
-      .pipe(
-         scss({
-            outputStyle: "expanded",
-         }).on("error", scss.logError)
-      )
-      .pipe(postcss([autoprefixer()]))
-      .pipe(gulp.dest("app/styles/"))
-      .pipe(csso())
-      .pipe(rename("styles.min.css"))
-      .pipe(gulp.dest("app/styles/"))
-      .pipe(server.stream());
-});
+const paths = {
+   src: {
+      html: "src/**/*.html",
+      css: "src/css",
+      styles: "src/styles/**/*.+(scss|sass|less)",
+      images: "src/images/**/*.{png,jpg}",
+      icons: "src/icons/**/*.svg",
+      scripts: "src/scripts/**/*.js",
+      fonts: "src/fonts/**/*.ttf",
+      portfolio: "src/portfolio-sites/**",
+   },
 
-gulp.task("js", () => {
-   return gulp
-      .src("source/scripts/*.js")
-      .pipe(
-         minify({
-            ext: {
-               min: ".min.js",
-            },
-            noSource: true,
-         })
-      )
-      .pipe(gulp.dest("app/scripts/"))
-      .pipe(server.stream());
-});
-
-gulp.task("image", () => {
-   return gulp
-      .src("source/images/**/*.{png,jpg}")
-      .pipe(
-         imagemin([
-            imagemin.optipng({
-               optimizationLevel: 3,
-            }),
-            imagemin.mozjpeg({
-               progressive: true,
-            }),
-         ])
-      )
-      .pipe(gulp.dest("app/images/"));
-});
-
-gulp.task("webp", () => {
-   return gulp
-      .src("source/images/*.{png,jpg}")
-      .pipe(webp())
-      .pipe(gulp.dest("app/images/webp/"));
-});
-
-gulp.task("svg", () => {
-   return gulp
-      .src("source/images/**/*.svg")
-      .pipe(
-         svgmin({
-            plugins: [
-               {
-                  cleanupIDs: false,
-               },
-            ],
-         })
-      )
-      .pipe(gulp.dest("app/images/"));
-});
+   build: {
+      root: "docs/",
+      css: "docs/css/",
+      images: "docs/images/",
+      icons: "docs/icons/",
+      scripts: "docs/scripts/",
+      fonts: "docs/fonts/",
+      portfolio: "docs/portfolio-sites/",
+   },
+};
 
 gulp.task("html", () => {
-   return gulp.src("index.html").pipe(server.stream());
+   return gulp.src(paths.src.html)
+      .pipe(posthtml([
+         include()
+      ]))
+      .pipe(htmlmin({
+         collapseWhitespace: true
+      }))
+      .pipe(gulp.dest(paths.build.root))
+      .pipe(browserSync.stream());
 });
 
-gulp.task("serve", () => {
-   server.init({
-      server: "./",
+gulp.task("css", () => {
+   return gulp.src(paths.src.styles)
+      .pipe(sourcemaps.init())
+      .pipe(plumber())
+      .pipe(scss({
+         outputStyle: "expanded"
+      }).on("error", scss.logError))
+      .pipe(postcss([
+         autoprefixer({
+            overrideBrowserslist: [
+               "last 1 version",
+               "last 2 Chrome versions",
+               "last 2 Firefox versions",
+               "last 2 Opera versions",
+               "last 2 Edge versions"
+            ]
+         }),
+         mqpacker({
+            sort: true
+         }),
+      ]))
+      .pipe(gulp.dest(paths.src.css))
+      .pipe(csso())
+      .pipe(rename({
+         // dirname: "",
+         // basename: "",
+         prefix: "",
+         suffix: ".min",
+         // extname: ""
+      }))
+      .pipe(sourcemaps.write())
+      .pipe(gulp.dest(paths.build.css))
+      .pipe(browserSync.stream());
+});
+
+gulp.task("images", () => {
+   return gulp.src(paths.build.images, {
+         allowEmpty: true
+      })
+      .pipe(clean())
+      .pipe(gulp.src(paths.src.images))
+      .pipe(imagemin([
+         imagemin.optipng({
+            optimizationLevel: 3,
+         }),
+         imagemin.mozjpeg({
+            quality: 70,
+            progressive: true,
+         }),
+      ]))
+      .pipe(gulp.dest(paths.build.images))
+      .pipe(gulp.src(paths.src.images))
+      .pipe(webp())
+      .pipe(gulp.dest(paths.build.images))
+      .pipe(browserSync.stream());
+});
+
+gulp.task("icons", () => {
+   return gulp.src(paths.build.icons, {
+         allowEmpty: true
+      })
+      .pipe(clean())
+      .pipe(gulp.src(paths.src.icons))
+      .pipe(svgmin({
+         plugins: [{
+            cleanupIDs: false
+         }]
+      }))
+      .pipe(gulp.dest(paths.build.icons))
+      .pipe(browserSync.stream());
+});
+
+gulp.task("scripts", () => {
+   return gulp.src(paths.build.scripts, {
+         allowEmpty: true
+      })
+      .pipe(clean())
+      .pipe(gulp.src(paths.src.scripts))
+      // .pipe(uglify())
+      .pipe(gulp.dest(paths.build.scripts))
+      .pipe(browserSync.stream());
+});
+
+gulp.task("fonts", () => {
+   return gulp.src(paths.build.fonts, {
+         allowEmpty: true
+      })
+      .pipe(clean())
+      .pipe(gulp.src(paths.src.fonts))
+      .pipe(ttf2woff())
+      .pipe(gulp.dest(paths.build.fonts))
+      .pipe(gulp.src(paths.src.fonts))
+      .pipe(ttf2woff2())
+      .pipe(gulp.dest(paths.build.fonts))
+      .pipe(browserSync.stream());
+});
+
+gulp.task("server", () => {
+   browserSync.init({
+      server: paths.build.root,
    });
 
-   gulp.watch("source/styles/**/*.scss", gulp.series("style"));
-   gulp.watch("index.html", gulp.series("html"));
-   gulp.watch("source/scripts/**/*.js", gulp.series("js"));
+   gulp.watch(paths.src.html, gulp.series("html"));
+   gulp.watch(paths.src.styles, gulp.series("css"));
+   gulp.watch(paths.src.images, gulp.series("images"));
+   gulp.watch(paths.src.icons, gulp.series("icons"));
+   gulp.watch(paths.src.scripts, gulp.series("scripts"));
+   gulp.watch(paths.src.fonts, gulp.series("fonts"));
+   gulp.watch(paths.src.portfolio, gulp.series("copy"));
 });
 
-gulp.task("clean", () => {
-   return del("app/");
+gulp.task("copy", () => {
+   return gulp.src(paths.build.portfolio, {
+         allowEmpty: true
+      })
+      .pipe(clean())
+      .pipe(gulp.src(paths.src.portfolio))
+      .pipe(gulp.dest(paths.build.portfolio))
+      .pipe(browserSync.stream());
 });
 
-gulp.task("build", gulp.series("clean", "style", "js", "svg", "image", "webp"));
+gulp.task("build", gulp.series(gulp.parallel("copy", "icons", "images", "fonts", ), gulp.parallel("html", "css", "scripts")));
