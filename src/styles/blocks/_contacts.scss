@@ -1,0 +1,57 @@
+.contacts {
+   background-color: lighten($dark-color, 5%);
+
+   &__inner {
+      @include inner;
+   }
+
+   &__title {
+      @include title;
+   }
+
+   &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      @include list;
+      margin-bottom: -40px;
+   }
+
+   &__item {
+      margin-bottom: 40px;
+   }
+
+   &__subtitle {
+      @include subtitle;
+   }
+
+   &__text {
+      @include text;
+   }
+}
+
+@media (min-width: 576px) {
+   .contacts {
+
+      &__list {
+         flex-wrap: wrap;
+      }
+
+      &__item {
+         width: 45%;
+      }
+   }
+}
+
+@media (min-width: 1024px) {
+   .contacts {
+
+      &__list {
+         margin-bottom: -40px;
+      }
+
+      &__item {
+         width: 29%;
+      }
+   }
+}

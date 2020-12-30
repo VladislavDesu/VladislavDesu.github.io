@@ -1,0 +1,68 @@
+@mixin hidden {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   padding: 0;
+   margin: -1px;
+   overflow: hidden;
+   clip: rect(0, 0, 0, 0);
+   white-space: nowrap;
+   border: 0;
+}
+
+@mixin inner {
+   max-width: 1480px;
+   margin: 0 auto;
+   padding-top: 40px;
+   padding-right: 20px;
+   padding-bottom: 40px;
+   padding-left: 20px;
+
+   @media (min-width: 1024px) {
+      padding-top: 80px;
+      padding-bottom: 80px;
+   }
+}
+
+@mixin title {
+   margin-bottom: 30px;
+   font-size: 45px;
+   text-transform: uppercase;
+   text-align: center;
+
+   @media (min-width: 1024px) {
+      margin-bottom: 40px;
+   }
+}
+
+@mixin subtitle {
+   margin-bottom: 15px;
+   font-weight: 500;
+   font-size: 30px;
+   text-transform: uppercase;
+   text-align: center;
+
+   @media (min-width: 1024px) {
+      margin-bottom: 30px;
+   }
+}
+
+@mixin text {
+   margin-bottom: 0;
+   color: $second-color;
+   text-align: center;
+}
+
+@mixin list {
+   margin: 0;
+   padding: 0;
+   list-style-type: none;
+}
+
+@mixin btn {
+   display: block;
+   margin: 0;
+   padding: 0;
+   border: none;
+   background-color: transparent;
+}

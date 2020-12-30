@@ -1,0 +1,48 @@
+.footer {
+
+   &__inner {
+      @include inner;
+      padding: 20px;
+   }
+
+   &__socials {
+      display: flex;
+      justify-content: center;
+      margin: 0;
+   }
+
+   &__social {
+      margin-right: 15px;
+      outline: none;
+
+      &:hover .footer__social-icon,
+      &:focus .footer__social-icon {
+         fill: $green-color;
+         transform: scale(1.2);
+      }
+
+      &-icon {
+         width: 25px;
+         height: 25px;
+         fill: $base-color;
+         transition: all 0.2s ease-out;
+      }
+
+      & span {
+         @include hidden;
+      }
+
+      &:last-child {
+         margin-right: 0;
+      }
+   }
+}
+
+@media (min-width: 1024px) {
+   .footer {
+
+      &__inner {
+         padding: 20px;
+      }
+   }
+}

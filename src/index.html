@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Me Portfolio</title>
+   <link rel="stylesheet" href="css/styles.min.css">
+</head>
+
+<body id="home">
+   <header class="header header--no-js">
+      <div class="header__inner">
+         <section class="header__navigation header__navigation--page-down">
+            <h1 class="header__title">This is my site about me, my portfolio and my contacts</h1>
+
+            <button class="header__btn-menu header__btn-menu--open" type="button">
+               <span>Close menu</span>
+            </button>
+
+            <nav class="header__list header__list--closed">
+               <a class="header__link" href="#home">Home</a>
+               <a class="header__link" href="#about">About</a>
+               <a class="header__link" href="#portfolio">Portfolio</a>
+               <a class="header__link" href="#services">Services</a>
+               <a class="header__link" href="#contacts">Contacts</a>
+            </nav>
+         </section>
+
+         <section class="header__promo">
+            <h2 class="header__name">I'm Vladislav Gryadko</h2>
+            <ul class="header__info">
+               <li>Web Developer</li>
+               <li>Enthusiast</li>
+               <li>Geek</li>
+            </ul>
+         </section>
+
+         <a href="#about" class="header__arrow arrow">
+            <span class="arrow__text">Go to the section About me</span>
+            <span class="arrow__element">
+               <span class="arrow__line"></span>
+               <span class="arrow__bottom"></span>
+            </span>
+         </a>
+      </div>
+   </header>
+
+   <main class="content">
+      <section id="about" class="about">
+         <div class="about__inner">
+            <h2 class="about__title">About me</h2>
+            <p class="about__text">
+               Learning front-end technology about one year. I am a <span>Junior front-end developer</span>. I want to
+               achieve great
+               success in this case, for this i am learning new technologies, reading interesting articles, taking
+               online courses.
+            </p>
+            
+            <p class="about__text">
+               <span>Junior</span> is one of the steps to <span>Middle front-end developer</span>, for
+               this i am learning <span>JavaScript's Frameworks</span> and <span>CMS</span>. Created layouts for myself, to improve my
+               knowledge in practice.
+            </p>
+
+            <div class="about__personal">
+               <section class="about__info info">
+                  <h3 class="info__title">More information about me</h3>
+
+                  <picture>
+                     <source srcset="images/delete.webp">
+                     <img class="info__photo" src="images/delete.jpg" width="100" height="100" alt="My photo">
+                  </picture>
+
+                  <p class="info__text"><span>FullName :</span> Vladislav Gryadko</p>
+                  <p class="info__text"><span>Birthday :</span> 11 April 2000</p>
+                  <p class="info__text"><span>Phone Number :</span> 380666519328</p>
+                  <p class="info__text"><span>E-Mail :</span> vgryadko@gmail.com</p>
+               </section>
+
+               <section class="about__skills skills">
+                  <h3 class="skills__title">Skills</h3>
+
+                  <ul class="skills__list">
+                     <li class="skills__item">
+                        <p class="skills__name">HTML5 & CSS3</p>
+                        <div class="skills__range">
+                           <span class="skills__precent skills__precent--html-css">85%</span>
+                        </div>
+                     </li>
+
+                     <li class="skills__item">
+                        <p class="skills__name">Bootstrap</p>
+                        <div class="skills__range">
+                           <span class="skills__precent skills__precent--bootstrap">70%</span>
+                        </div>
+                     </li>
+
+                     <li class="skills__item">
+                        <p class="skills__name">JavaScript</p>
+                        <div class="skills__range">
+                           <span class="skills__precent skills__precent--javascript">60%</span>
+                        </div>
+                     </li>
+                  </ul>
+               </section>
+            </div>
+         </div>
+      </section>
+
+      <section id="portfolio" class="portfolio">
+         <div class="portfolio__inner">
+            <h2 class="portfolio__title">Portfolio</h2>
+
+            <ul class="portfolio__list"></ul>
+
+            <div class="portfolio__btns">
+               <button id="btn-load-more" class="portfolio__btn-more" type="button">
+                  <span>Load more</span>
+               </button>
+
+               <button class="portfolio__btn-less" type="button">
+                  <span>Load less</span>
+               </button>
+            </div>
+         </div>
+      </section>
+
+      <section id="services" class="services">
+         <div class="services__inner">
+            <h2 class="services__title">Services</h2>
+
+            <ul class="services__list">
+               <li class="services__item">
+                  <h3 class="services__subtitle">Title</h3>
+                  <p class="services__text">
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum minus, fugiat sunt aspernatur
+                     tenetur fuga debitis. Totam odit expedita esse, blanditiis aliquid quibusdam enim iure delectus
+                     nisi cum corporis iste.
+                  </p>
+               </li>
+
+               <li class="services__item">
+                  <h3 class="services__subtitle">Title</h3>
+                  <p class="services__text">
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum minus, fugiat sunt aspernatur
+                     tenetur fuga debitis. Totam odit expedita esse, blanditiis aliquid quibusdam enim iure delectus
+                     nisi cum corporis iste.
+                  </p>
+               </li>
+
+               <li class="services__item">
+                  <h3 class="services__subtitle">Title</h3>
+                  <p class="services__text">
+                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum minus, fugiat sunt aspernatur
+                     tenetur fuga debitis. Totam odit expedita esse, blanditiis aliquid quibusdam enim iure delectus
+                     nisi cum corporis iste.
+                  </p>
+               </li>
+            </ul>
+         </div>
+      </section>
+
+      <section id="contacts" class="contacts">
+         <div class="contacts__inner">
+            <h2 class="contacts__title">Contacts</h2>
+
+            <ul class="contacts__list">
+               <li class="contacts__item">
+                  <h3 class="contacts__subtitle">Title</h3>
+                  <p class="contacts__text">Lorem ipsum dolor sit amet</p>
+               </li>
+
+               <li class="contacts__item">
+                  <h3 class="contacts__subtitle">Title</h3>
+                  <p class="contacts__text">Lorem ipsum dolor sit amet</p>
+               </li>
+
+               <li class="contacts__item">
+                  <h3 class="contacts__subtitle">Title</h3>
+                  <p class="contacts__text">Lorem ipsum dolor sit amet</p>
+               </li>
+            </ul>
+         </div>
+      </section>
+   </main>
+
+   <footer class="footer">
+      <div class="footer__inner">
+         <p class="footer__socials">
+            <a class="footer__social" href="https://t.me/VladislavDesu">
+               <span>My Telegram</span>
+               <include src="docs/icons/telegram.svg"></include>
+            </a>
+
+            <a class="footer__social" href="https://github.com/VladislavDesu">
+               <span>My Github</span>
+               <include src="docs/icons/github.svg"></include>
+            </a>
+
+            <a class="footer__social" href="https://www.linkedin.com/in/vladislav-gryadko/">
+               <span>My Linkedin</span>
+               <include src="docs/icons/linkedin.svg"></include>
+            </a>
+
+            <a class="footer__social" href="#">
+               <span>My Google Mail</span>
+               <include src="docs/icons/gmail.svg"></include>
+            </a>
+         </p>
+      </div>
+   </footer>
+
+   <template id="portfolio-item">
+      <li class="portfolio__item">
+         <picture>
+            <source srcset="#">
+            <img class="portfolio__photo" src="#" alt="Alternative text">
+         </picture>
+
+         <div class="portfolio__info">
+            <h3 class="portfolio__name">Name</h3>
+
+            <div class="portfolio__links">
+               <a class="portfolio__link" href="#">
+                  <span>Go to this project</span>
+                  <include src="docs/icons/link.svg"></include>
+               </a>
+
+               <a class="portfolio__link-copy" href="#">
+                  <span>Copy link</span>
+                  <include src="docs/icons/share.svg"></include>
+               </a>
+            </div>
+
+            <div class="portfolio__lines">
+               <div class="portfolio__line"></div>
+               <div class="portfolio__line"></div>
+            </div>
+         </div>
+      </li>
+   </template>
+
+   <script src="scripts/menu.js"></script>
+   <script src="scripts/createPortfolioCards.js"></script>
+</body>
+
+</html>

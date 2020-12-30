@@ -1,0 +1,49 @@
+.skills {
+
+   &__title {
+      @include subtitle;
+   }
+
+   &__list {
+      @include list;
+   }
+
+   &__item {
+      margin-bottom: 30px;
+
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
+
+   &__name {
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      text-align: center;
+   }
+
+   &__range {
+      background-color: darken($dark-color, 2%);
+   }
+
+   &__precent {
+      display: block;
+      font-size: 18px;
+      line-height: 20px;
+      color: $base-color;
+      background-color: $green-color;
+      text-align: center;
+
+      &--html-css {
+         width: 85%;
+      }
+      
+      &--bootstrap {
+         width: 70%;
+      }
+
+      &--javascript {
+         width: 60%;
+      }
+   }
+}
