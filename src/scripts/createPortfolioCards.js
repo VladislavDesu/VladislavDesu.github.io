@@ -1,4 +1,6 @@
-"use strict"
+"use strict";
+
+const $ = require("jquery");
 
 function createPortfolioCards(cards) {
    const portfolioList = document.querySelector(".portfolio__list");
@@ -117,52 +119,26 @@ const portfolioCards = [{
 ];
 
 const portfolio = document.querySelector("#portfolio");
-const portfolioList = portfolio.querySelector(".portfolio__list");
-const portfolioBtnMore = portfolio.querySelector(".portfolio__btn-more");
-const portfolioBtnLess = portfolio.querySelector(".portfolio__btn-less");
-let portfolioCardsLen = portfolioCards.length;
-let maxItems = 3;
+const portfolioBtn = portfolio.querySelector(".portfolio__btn");
 
-portfolioCards.slice(0, maxItems).forEach((i) => {
+const portfolioCardsLen = portfolioCards.length;
+const portfolioItems = 0;
+const maxItems = 3;
+
+let minPortfolioItems = maxItems;
+let maxPortfolioItems = portfolioCardsLen;
+
+portfolioCards.slice(portfolioItems, minPortfolioItems).forEach((i) => {
    createPortfolioCards(i);
 });
 
-// portfolioBtnMore.addEventListener("click", (e) => {
-//    e.preventDefault();
+portfolioBtn.addEventListener("click", (e) => {
+   portfolioCards.slice(minPortfolioItems, maxPortfolioItems).forEach((i) => {
+      createPortfolioCards(i);
+      minPortfolioItems++;
+   });
 
-//    if (maxItems >= portfolioCardsLen - 3) {
-//       portfolioBtnMore.style.display = "none";
-//       portfolioBtnLess.style.display = "block";
-//    }
-
-//    portfolioCards.slice(maxItems, maxItems + 3).forEach((i) => {
-//       createPortfolioCards(i);
-//       maxItems++;
-//    });
-// });
-
-// portfolioBtnLess.addEventListener("click", (e) => {
-//    e.preventDefault();
-
-//    if (maxItems >= 7) {
-//       if (maxItems % 3 === 2) {
-//          for (let i = 1; i <= 2; i++) {
-//             maxItems--;
-//             portfolioList.childNodes[maxItems].style.display = "none";
-//          }
-//       } else if (maxItems % 3 === 0) {
-//          for (let i = 1; i <= 3; i++) {
-//             maxItems--;
-//             portfolioList.childNodes[maxItems].style.display = "none";
-//          }
-//       } else if (maxItems % 3 === 1) {
-//          for (let i = 1; i <= 1; i++) {
-//             maxItems--;
-//             portfolioList.childNodes[maxItems].style.display = "none";
-//          }
-//       }
-//    } else {
-//       portfolioBtnLess.style.display = "none";
-//       portfolioBtnMore.style.display = "block";
-//    }
-// });
+   if (minPortfolioItems === maxPortfolioItems) {
+      portfolioBtn.style.display = "none";
+   };
+});
