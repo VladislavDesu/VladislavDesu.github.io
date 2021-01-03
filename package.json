@@ -1,11 +1,12 @@
 {
   "name": "meportfolio",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp build & gulp server",
-    "build": "gulp build"
+    "build": "gulp build",
+    "server": "gulp server"
   },
   "author": "Vlad Gryadko (vgryadko@gmail.com)",
   "license": "ISC",
@@ -27,9 +28,14 @@
     "gulp-svgmin": "^3.0.0",
     "gulp-ttf2woff": "^1.1.1",
     "gulp-ttf2woff2": "^3.0.0",
-    "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
+    "jquery": "^3.5.1",
+    "lodash": "^4.17.20",
+    "parallax-js": "^3.1.0",
     "postcss": "^8.2.1",
-    "posthtml-include": "^1.6.0"
+    "posthtml-include": "^1.6.0",
+    "webpack": "^5.11.1",
+    "webpack-cli": "^4.3.1",
+    "webpack-stream": "^6.1.1"
   }
 }

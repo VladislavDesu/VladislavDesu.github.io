@@ -15,8 +15,8 @@ const gulp = require("gulp"),
    plumber = require("gulp-plumber"),
    ttf2woff = require("gulp-ttf2woff"),
    ttf2woff2 = require("gulp-ttf2woff2"),
-   uglify = require("gulp-uglify"),
    clean = require("gulp-clean"),
+   webpackStream = require('webpack-stream'),
    rename = require("gulp-rename");
 
 const paths = {
@@ -44,6 +44,7 @@ const paths = {
 
 gulp.task("html", () => {
    return gulp.src(paths.src.html)
+      .pipe(plumber())
       .pipe(posthtml([
          include()
       ]))
@@ -127,12 +128,9 @@ gulp.task("icons", () => {
 });
 
 gulp.task("scripts", () => {
-   return gulp.src(paths.build.scripts, {
-         allowEmpty: true
-      })
-      .pipe(clean())
-      .pipe(gulp.src(paths.src.scripts))
-      // .pipe(uglify())
+   return gulp.src(paths.src.scripts)
+      .pipe(plumber())
+      .pipe(webpackStream(require("./webpack.config.js")))
       .pipe(gulp.dest(paths.build.scripts))
       .pipe(browserSync.stream());
 });
