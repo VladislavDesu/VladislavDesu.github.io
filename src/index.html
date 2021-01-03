@@ -8,13 +8,28 @@
    <link rel="stylesheet" href="css/styles.min.css">
 </head>
 
-<body id="home">
+<body id="home" class="loading">
+   <div class="loader">
+      <div class="loader__item">
+         <div class="loader__point"></div>
+      </div>
+      <div class="loader__item">
+         <div class="loader__point"></div>
+      </div>
+      <div class="loader__item">
+         <div class="loader__point"></div>
+      </div>
+      <div class="loader__item">
+         <div class="loader__point"></div>
+      </div>
+   </div>
+
    <header class="header header--no-js">
       <div class="header__inner">
-         <section class="header__navigation header__navigation--page-down">
+         <section class="header__navigation">
             <h1 class="header__title">This is my site about me, my portfolio and my contacts</h1>
 
-            <button class="header__btn-menu header__btn-menu--open" type="button">
+            <button class="header__btn-menu header__btn-menu--open" type="button" title="Close menu">
                <span>Close menu</span>
             </button>
 
@@ -36,7 +51,7 @@
             </ul>
          </section>
 
-         <a href="#about" class="header__arrow arrow">
+         <a href="#about" class="header__arrow arrow" title="Go to the section About me">
             <span class="arrow__text">Go to the section About me</span>
             <span class="arrow__element">
                <span class="arrow__line"></span>
@@ -56,11 +71,11 @@
                success in this case, for this i am learning new technologies, reading interesting articles, taking
                online courses.
             </p>
-            
+
             <p class="about__text">
                <span>Junior</span> is one of the steps to <span>Middle front-end developer</span>, for
-               this i am learning <span>JavaScript's Frameworks</span> and <span>CMS</span>. Created layouts for myself, to improve my
-               knowledge in practice.
+               this i am learning <span>JavaScript's Frameworks</span> and <span>CMS</span>. Created layouts for myself,
+               to improve my knowledge in practice.
             </p>
 
             <div class="about__personal">
@@ -68,8 +83,8 @@
                   <h3 class="info__title">More information about me</h3>
 
                   <picture>
-                     <source srcset="images/delete.webp">
-                     <img class="info__photo" src="images/delete.jpg" width="100" height="100" alt="My photo">
+                     <source srcset="images/my-photo.webp">
+                     <img class="info__photo" src="images/my-photo.jpg" width="563" height="707" alt="My photo">
                   </picture>
 
                   <p class="info__text"><span>FullName :</span> Vladislav Gryadko</p>
@@ -84,6 +99,7 @@
                   <ul class="skills__list">
                      <li class="skills__item">
                         <p class="skills__name">HTML5 & CSS3</p>
+
                         <div class="skills__range">
                            <span class="skills__precent skills__precent--html-css">85%</span>
                         </div>
@@ -91,6 +107,7 @@
 
                      <li class="skills__item">
                         <p class="skills__name">Bootstrap</p>
+
                         <div class="skills__range">
                            <span class="skills__precent skills__precent--bootstrap">70%</span>
                         </div>
@@ -98,6 +115,7 @@
 
                      <li class="skills__item">
                         <p class="skills__name">JavaScript</p>
+
                         <div class="skills__range">
                            <span class="skills__precent skills__precent--javascript">60%</span>
                         </div>
@@ -114,15 +132,9 @@
 
             <ul class="portfolio__list"></ul>
 
-            <div class="portfolio__btns">
-               <button id="btn-load-more" class="portfolio__btn-more" type="button">
-                  <span>Load more</span>
-               </button>
-
-               <button class="portfolio__btn-less" type="button">
-                  <span>Load less</span>
-               </button>
-            </div>
+            <button class="portfolio__btn" type="button" title="Load more">
+               <span>Load more</span>
+            </button>
          </div>
       </section>
 
@@ -133,6 +145,7 @@
             <ul class="services__list">
                <li class="services__item">
                   <h3 class="services__subtitle">Title</h3>
+
                   <p class="services__text">
                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum minus, fugiat sunt aspernatur
                      tenetur fuga debitis. Totam odit expedita esse, blanditiis aliquid quibusdam enim iure delectus
@@ -142,6 +155,7 @@
 
                <li class="services__item">
                   <h3 class="services__subtitle">Title</h3>
+
                   <p class="services__text">
                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum minus, fugiat sunt aspernatur
                      tenetur fuga debitis. Totam odit expedita esse, blanditiis aliquid quibusdam enim iure delectus
@@ -151,6 +165,7 @@
 
                <li class="services__item">
                   <h3 class="services__subtitle">Title</h3>
+
                   <p class="services__text">
                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum minus, fugiat sunt aspernatur
                      tenetur fuga debitis. Totam odit expedita esse, blanditiis aliquid quibusdam enim iure delectus
@@ -168,16 +183,19 @@
             <ul class="contacts__list">
                <li class="contacts__item">
                   <h3 class="contacts__subtitle">Title</h3>
+
                   <p class="contacts__text">Lorem ipsum dolor sit amet</p>
                </li>
 
                <li class="contacts__item">
                   <h3 class="contacts__subtitle">Title</h3>
+
                   <p class="contacts__text">Lorem ipsum dolor sit amet</p>
                </li>
 
                <li class="contacts__item">
                   <h3 class="contacts__subtitle">Title</h3>
+
                   <p class="contacts__text">Lorem ipsum dolor sit amet</p>
                </li>
             </ul>
@@ -188,28 +206,36 @@
    <footer class="footer">
       <div class="footer__inner">
          <p class="footer__socials">
-            <a class="footer__social" href="https://t.me/VladislavDesu">
+            <a class="footer__social" href="https://t.me/VladislavDesu" title="Open my Telegram">
                <span>My Telegram</span>
                <include src="docs/icons/telegram.svg"></include>
             </a>
 
-            <a class="footer__social" href="https://github.com/VladislavDesu">
+            <a class="footer__social" href="https://github.com/VladislavDesu" title="Open my Github">
                <span>My Github</span>
                <include src="docs/icons/github.svg"></include>
             </a>
 
-            <a class="footer__social" href="https://www.linkedin.com/in/vladislav-gryadko/">
+            <a class="footer__social" href="https://www.linkedin.com/in/vladislav-gryadko/" title="Open my Linkedin">
                <span>My Linkedin</span>
                <include src="docs/icons/linkedin.svg"></include>
             </a>
 
-            <a class="footer__social" href="#">
+            <a class="footer__social" href="#" title="Open my Google Mail">
                <span>My Google Mail</span>
                <include src="docs/icons/gmail.svg"></include>
             </a>
          </p>
       </div>
    </footer>
+
+   <a href="#home" class="arrow arrow--btn-up" title="Go to the section Home">
+      <span class="arrow__text">Go to the section Home</span>
+      <span class="arrow__element">
+         <span class="arrow__line"></span>
+         <span class="arrow__bottom"></span>
+      </span>
+   </a>
 
    <template id="portfolio-item">
       <li class="portfolio__item">
@@ -222,13 +248,13 @@
             <h3 class="portfolio__name">Name</h3>
 
             <div class="portfolio__links">
-               <a class="portfolio__link" href="#">
-                  <span>Go to this project</span>
+               <a class="portfolio__link" href="#" title="Open to this project">
+                  <span>Open to this project</span>
                   <include src="docs/icons/link.svg"></include>
                </a>
 
-               <a class="portfolio__link-copy" href="#">
-                  <span>Copy link</span>
+               <a class="portfolio__link portfolio__link--copy" href="#" title="Copy this project link">
+                  <span>Copy this project link</span>
                   <include src="docs/icons/share.svg"></include>
                </a>
             </div>
@@ -241,8 +267,7 @@
       </li>
    </template>
 
-   <script src="scripts/menu.js"></script>
-   <script src="scripts/createPortfolioCards.js"></script>
+   <script src="scripts/main.js"></script>
 </body>
 
 </html>
