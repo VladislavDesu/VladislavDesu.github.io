@@ -8,5 +8,10 @@ html {
    scroll-behavior: smooth;
 }
 
+.loading {
+   overflow-y: hidden;
+}
 
-
+#home {
+   overflow-x: hidden;
+}

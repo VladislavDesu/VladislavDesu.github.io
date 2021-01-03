@@ -1,4 +1,5 @@
 .about {
+
    &__inner {
       @include inner;
    }
@@ -44,7 +45,7 @@
          margin-right: auto;
          margin-left: auto;
       }
-      
+
       &__info {
          display: grid;
          grid-template-columns: 1fr 1fr;

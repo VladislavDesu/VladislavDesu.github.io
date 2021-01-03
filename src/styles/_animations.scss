@@ -1,4 +1,4 @@
-@keyframes arrow {
+@keyframes arrow-down {
    0% {
       top: 25px;
 
@@ -16,5 +16,58 @@
 
    100% {
       top: 25px;
+   }
+}
+
+@keyframes arrow-up {
+   0% {
+      bottom: 0;
+
+   }
+
+   30% {
+      opacity: 1;
+   }
+
+   90% {
+      bottom: 0;
+      opacity: 0;
+   }
+
+
+   100% {
+      bottom: 0;
+   }
+}
+
+@keyframes rotate-item {
+   from {
+      transform: rotateZ(0deg);
+   }
+
+   to {
+      transform: rotateZ(360deg);
+   }
+}
+
+@keyframes rotate-point {
+   from {
+      transform: rotateX(90deg) rotateY(0deg);
+   }
+
+   to {
+      transform: rotateX(90deg) rotateY(-360deg);
+   }
+}
+
+@keyframes light {
+
+   0%,
+   100% {
+      box-shadow: 0 0 0 transparent;
+   }
+
+   50% {
+      box-shadow: 0 0 25px #fff;
    }
 }

@@ -1,7 +1,8 @@
 .footer {
 
    &__inner {
-      @include inner;
+      max-width: 1480px;
+      margin: 0 auto;
       padding: 20px;
    }
 
@@ -38,11 +39,11 @@
    }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 576px) {
    .footer {
 
       &__inner {
-         padding: 20px;
+         padding: 40px 20px;
       }
    }
 }

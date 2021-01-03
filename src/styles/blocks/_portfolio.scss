@@ -45,7 +45,7 @@
          transition: opacity 0.4s ease-out 1.2s;
       }
 
-      &:hover .portfolio__link-copy {
+      &:hover .portfolio__link--copy {
          visibility: visible;
          opacity: 1;
          transition: opacity 0.4s ease-out 1.6s;
@@ -108,17 +108,19 @@
       display: flex;
    }
 
-   &__link,
-   &__link-copy {
+   &__link {
       margin-right: 15px;
       visibility: hidden;
       opacity: 0;
+
+      &:focus {
+         outline: none;
+      }
 
       &-icon {
          width: 25px;
          height: 25px;
          fill: $base-color;
-         outline: none;
          transition: all 0.2s ease-out;
       }
 
@@ -142,17 +144,12 @@
       height: auto;
    }
 
-   &__btns {
-      display: flex;
-      justify-content: center;
-   }
-
-   &__btn-more,
-   &__btn-less {
+   &__btn {
       @include btn;
       position: relative;
       width: 60px;
       height: 60px;
+      margin: 0 auto;
       border-radius: 50%;
       background-color: $green-color;
       transition: box-shadow 0.4s ease-out;
@@ -162,14 +159,6 @@
          outline: none;
          box-shadow: 0px 0px 10px 5px darken($green-color, 5%);
       }
-
-      &:hover::before,
-      &:hover::after,
-      &:focus::before,
-      &:focus::after {
-         transform: translate(-50%, -50%) rotate(180deg);
-      }
-
 
       &::before,
       &::after {
@@ -181,7 +170,6 @@
          height: 30px;
          background-color: $base-color;
          transform: translate(-50%, -50%);
-         transition: transform 0.2s linear;
       }
 
       &::after {
@@ -191,14 +179,6 @@
 
       & span {
          @include hidden;
-      }
-   }
-
-   &__btn-less {
-      display: none;
-
-      &::before {
-         display: none;
       }
    }
 }
@@ -224,17 +204,21 @@
 @media (min-width: 1024px) {
    .portfolio {
 
-      &__list {
-         justify-content: space-between;
-      }
-
       &__name {
          margin-bottom: 0;
       }
 
       &__item {
-         width: 32%;
-         margin-right: 0;
+         width: calc(33.33% - 14px);
+         margin-right: 20px;
+
+         &:nth-child(2n) {
+            margin-right: 20px;
+         }
+
+         &:nth-child(3n) {
+            margin-right: 0px;
+         }
       }
    }
 }
