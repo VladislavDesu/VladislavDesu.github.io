@@ -1,0 +1,50 @@
+.theme {
+
+   &__text {
+      margin-right: 15px;
+      font-weight: 500;
+      font-size: 30px;
+      text-align: center;
+      color: var(--white-color);
+   }
+
+   &__btn {
+      position: relative;
+      width: 60px;
+      height: 30px;
+      padding: 0;
+      border: 3px solid transparent;
+      border-radius: 50px;
+      background-color: var(--bg-color1);
+
+      &:hover,
+      &:focus {
+         outline: none;
+         border: 3px solid var(--secondary-color);
+      }
+
+      &::before {
+         content: "";
+         position: absolute;
+         top: 50%;
+         left: 0;
+         width: 18px;
+         height: 18px;
+         margin-top: -9px;
+         border-radius: 50%;
+         background-color: var(--base-color);
+         transform: translateX(5px);
+         transition: all 0.3s linear;
+      }
+
+      &--light {
+         &::before {
+            transform: translateX(30px);
+         }
+      }
+
+      & span {
+         @include hidden;
+      }
+   }
+}
