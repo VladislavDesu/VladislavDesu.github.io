@@ -8,6 +8,17 @@
       margin-bottom: 15px;
       text-align: center;
 
+      & a {
+         color: $base-color;
+
+         &:hover,
+         &:focus {
+            color: $base-color;
+            outline: none;
+            text-decoration: underline;
+         }
+      }
+
       &:last-child {
          margin-bottom: 0;
       }

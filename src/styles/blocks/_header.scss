@@ -132,12 +132,42 @@
    &__info {
       display: flex;
       flex-direction: column;
-      margin: 0;
+      margin-bottom: 20px;
       padding: 5px 10px;
       font-weight: 500;
       font-size: 25px;
       background-color: $green-color;
       list-style-position: inside;
+   }
+
+   &__lang {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 0;
+      font-weight: 500;
+      font-size: 30px;
+      text-align: center;
+
+      &-text {
+         width: 100%;
+      }
+
+      &-line {
+         margin: 0 10px;
+      }
+
+      &-link {
+         font-size: 25px;
+         color: $base-color;
+
+         &:hover,
+         &:focus {
+            outline: 0;
+            color: $base-color;
+            text-decoration: underline;
+         }
+      }
    }
 
    &__arrow {
@@ -208,6 +238,19 @@
 
       &__btn-menu {
          display: none;
+      }
+
+      &__lang {
+         display: block;
+         text-align: left;
+
+         &-text {
+            margin-right: 10px;
+         }
+
+         &-line {
+            margin: 0;
+         }
       }
 
       &__arrow {
