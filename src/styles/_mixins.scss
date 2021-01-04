@@ -49,7 +49,7 @@
 
 @mixin text {
    margin-bottom: 0;
-   color: $second-color;
+   color: var(--text-color);
    text-align: center;
 }
 

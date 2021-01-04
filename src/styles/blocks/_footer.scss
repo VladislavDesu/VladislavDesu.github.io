@@ -18,14 +18,14 @@
 
       &:hover .footer__social-icon,
       &:focus .footer__social-icon {
-         fill: $green-color;
+         fill: var(--secondary-color);
          transform: scale(1.2);
       }
 
       &-icon {
          width: 25px;
          height: 25px;
-         fill: $base-color;
+         fill: var(--base-color);
          transition: all 0.2s ease-out;
       }
 

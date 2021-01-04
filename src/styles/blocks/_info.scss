@@ -9,11 +9,11 @@
       text-align: center;
 
       & a {
-         color: $base-color;
+         color: var(--base-color);
 
          &:hover,
          &:focus {
-            color: $base-color;
+            color: var(--base-color);
             outline: none;
             text-decoration: underline;
          }
@@ -25,7 +25,7 @@
 
       & span {
          display: block;
-         color: $green-color;
+         color: var(--secondary-color);
       }
    }
 

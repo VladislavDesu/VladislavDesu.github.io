@@ -13,7 +13,7 @@
       margin-bottom: 20px;
 
       & span {
-         color: $base-color;
+         color: var(--base-color);
          text-transform: capitalize;
          font-style: italic;
       }
@@ -22,8 +22,8 @@
    &__personal {
       padding: 20px;
       border-radius: 15px;
-      color: $base-color;
-      background-color: lighten($dark-color, 5%);
+      color: var(--base-color);
+      background-color: var(--bg-color2);
    }
 
    &__info {
@@ -33,7 +33,7 @@
 
    &__skills {
       padding-top: 20px;
-      border-top: 1px solid rgba(242, 242, 242, 0.7);
+      border-top: 1px solid var(--base-color);
    }
 }
 

@@ -1,11 +1,3 @@
 ::-webkit-scrollbar {
-   width: 15px;
-   border-radius: 10px;
-   background-color: darken($dark-color, 2%);
-}
-
-::-webkit-scrollbar-thumb {
-   border-radius: 10px;
-   background-image: url("../images/scrollbar-pattern.png");
-   background-color: lighten($dark-color, 20%);
+   display: none;
 }

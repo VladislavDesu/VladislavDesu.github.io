@@ -5,7 +5,7 @@
    z-index: 100;
    width: 100vw;
    height: 100vh;
-   background-color: darken($dark-color, 2%);
+   background-color: var(--bg-color1);
 
    &__item {
       position: absolute;
@@ -24,10 +24,10 @@
             position: absolute;
             height: 40px;
             width: 40px;
-            background: #fff;
+            background-color: var(--base-color);
             border-radius: 50%;
             transform: rotateX(-80deg) rotateY(0);
-            box-shadow: 0 0 25px #fff;
+            box-shadow: 0 0 25px var(--base-color);
             animation: light 2s infinite linear;
             left: 50%;
             top: 50%;
@@ -119,8 +119,8 @@
          height: 5px;
          margin-left: -5px;
          border-radius: 50%;
-         background-color: #fff;
-         box-shadow: 0 0 12px #fff;
+         background-color: var(--base-color);
+         box-shadow: 0 0 12px var(--base-color);
          animation-name: rotate-point;
          animation-duration: 2s;
          animation-iteration-count: infinite;

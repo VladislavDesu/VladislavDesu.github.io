@@ -1,5 +1,5 @@
 .contacts {
-   background-color: lighten($dark-color, 5%);
+   background-color: var(--bg-color2);
 
    &__inner {
       @include inner;

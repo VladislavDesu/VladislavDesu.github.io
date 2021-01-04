@@ -3,15 +3,8 @@ html {
    font-size: 20px;
    line-height: 1.4;
    font-family: "Rubik", "Arial", sans-serif;
-   color: $base-color;
-   background-color: $dark-color;
+   color: var(--base-color);
+   background-color: var(--bg-color1);
    scroll-behavior: smooth;
-}
-
-.loading {
-   overflow-y: hidden;
-}
-
-#home {
    overflow-x: hidden;
 }

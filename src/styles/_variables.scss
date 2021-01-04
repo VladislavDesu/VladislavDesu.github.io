@@ -1,4 +1,21 @@
-$dark-color: #14141e; //#f7f7f7
-$base-color: #ffffff;
-$second-color: #a1a1a1;
-$green-color: #0cba58;
+.portfolio-theme {
+   --bg-color1: #ffffff;
+   --bg-color2: #e7e7e7;
+   --base-color: #000000;
+   --text-color: #737373;
+   --secondary-color: #0cba58;
+   --white-color: #ffffff;
+   --scrollbar: #e7e7e7;
+   transition: all 0.3s linear;
+}
+
+.portfolio-theme--dark {
+   --bg-color1: #0e0e10;
+   --bg-color2: #18181b;
+   --base-color: #ffffff;
+   --text-color: #a1a1a1;
+   --secondary-color: #0cba58;
+   --white-color: #ffffff;
+   --scrollbar: #18181b;
+   transition: all 0.3s linear;
+}

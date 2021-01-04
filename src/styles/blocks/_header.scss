@@ -12,9 +12,8 @@
 
    &__inner {
       position: relative;
-      height: 100vh;
-      background-image: url("../images/header-pattern.png");
-      background-color: lighten($dark-color, 5%);
+      background-image: url("/images/header-pattern.png");
+      background-color: var(--bg-color2);
    }
 
    &__navigation {
@@ -40,14 +39,14 @@
       width: 100%;
       font-size: 25px;
       margin-bottom: 10px;
-      color: $base-color;
+      color: var(--white-color);
       text-align: center;
       outline: none;
       transition: color 0.2s ease-out;
 
       &:hover,
       &:focus {
-         color: $green-color;
+         color: var(--secondary-color);
          text-decoration: none;
       }
 
@@ -81,7 +80,7 @@
          left: 50%;
          width: 30px;
          height: 2px;
-         background-color: $base-color;
+         background-color: var(--white-color);
          transform: translate(-50%, -50%) rotate(45deg);
          box-shadow: none;
       }
@@ -99,11 +98,11 @@
             left: 50%;
             width: 30px;
             height: 2px;
-            background-color: $base-color;
+            background-color: var(--white-color);
             transform: translate(-50%, -50%);
             box-shadow:
-               0 10px 0 0 $base-color,
-               0 -10px 0 0 $base-color;
+               0 10px 0 0 var(--white-color),
+               0 -10px 0 0 var(--white-color);
          }
 
          &::after {
@@ -120,13 +119,15 @@
       display: flex;
       flex-direction: column;
       padding: 20px;
-      border-top: 1px solid rgba(242, 242, 242, 0.7);
+      padding-bottom: 60px;
+      border-top: 1px solid var(--white-color);
    }
 
    &__name {
       margin-bottom: 20px;
       font-size: 50px;
       text-align: center;
+      color: var(--white-color);
    }
 
    &__info {
@@ -136,7 +137,8 @@
       padding: 5px 10px;
       font-weight: 500;
       font-size: 25px;
-      background-color: $green-color;
+      color: var(--white-color);
+      background-color: var(--secondary-color);
       list-style-position: inside;
    }
 
@@ -144,10 +146,11 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      margin-bottom: 0;
+      margin-bottom: 20px;
       font-weight: 500;
       font-size: 30px;
       text-align: center;
+      color: var(--white-color);
 
       &-text {
          width: 100%;
@@ -159,15 +162,23 @@
 
       &-link {
          font-size: 25px;
-         color: $base-color;
+         color: var(--white-color);
+         transition: color .2s ease-out;
 
          &:hover,
          &:focus {
             outline: 0;
-            color: $base-color;
-            text-decoration: underline;
+            color: var(--secondary-color);
+            text-decoration: none;
          }
       }
+   }
+
+   &__theme {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
    }
 
    &__arrow {
@@ -178,20 +189,24 @@
       width: 80px;
       height: 80px;
       border-radius: 50%;
-      background-color: $green-color;
+      background-color: var(--secondary-color);
       outline: 0;
       transform: translateX(-50%);
       transition: box-shadow 0.4s ease-out;
 
       &:hover,
       &:focus {
-         box-shadow: 0px 0px 10px 5px darken($green-color, 5%);
+         box-shadow: 0px 0px 10px 5px var(--secondary-color);
       }
    }
 }
 
 @media (min-width: 576px) {
    .header {
+
+      &__inner {
+         height: 100vh;
+      }
 
       &__navigation {
          min-height: auto;
@@ -210,6 +225,7 @@
 
       &__promo {
          align-items: flex-start;
+         padding: 20px;
       }
 
       &__info {
