@@ -9,12 +9,24 @@
    <link rel="stylesheet" href="/css/styles.min.css">
 </head>
 
-<body id="home" class="loading">
+<body id="home" class="portfolio-theme portfolio-theme--dark">
    <div class="loader">
-      <div class="loader__item"><div class="loader__point"></div></div>
-      <div class="loader__item"><div class="loader__point"></div></div>
-      <div class="loader__item"><div class="loader__point"></div></div>
-      <div class="loader__item"><div class="loader__point"></div></div>
+      <div class="loader__item">
+         <div class="loader__point"></div>
+      </div>
+      <div class="loader__item">
+         <div class="loader__point"></div>
+      </div>
+      <div class="loader__item">
+         <div class="loader__point"></div>
+      </div>
+      <div class="loader__item">
+         <div class="loader__point"></div>
+      </div>
+   </div>
+
+   <div class="progress-bar">
+      <div class="progress-bar__load" id="progressBar"></div>
    </div>
 
    <header class="header header--no-js">
@@ -27,11 +39,11 @@
             </button>
 
             <nav class="header__list header__list--closed">
-               <a class="header__link" href="#home">Главная</a>
-               <a class="header__link" href="#about">Обо мне</a>
-               <a class="header__link" href="#portfolio">Портфолио</a>
-               <a class="header__link" href="#services">Сервисы</a>
-               <a class="header__link" href="#contacts">Контакты</a>
+               <a class="header__link" href="#home" title="Перейти в раздел Главная">Главная</a>
+               <a class="header__link" href="#about" title="Перейти в раздел Обо мне">Обо мне</a>
+               <a class="header__link" href="#portfolio" title="Перейти в раздел Портфолио">Портфолио</a>
+               <a class="header__link" href="#services" title="Перейти в раздел Сервисы">Сервисы</a>
+               <a class="header__link" href="#contacts" title="Перейти в раздел Контакты">Контакты</a>
             </nav>
          </section>
 
@@ -46,9 +58,16 @@
 
             <p class="header__lang">
                <span class="header__lang-text">Язык:</span>
-               <a class="header__lang-link" href="#home">рус.</a>
+               <a class="header__lang-link" href="#home" title="Открыть русскую версию">рус.</a>
                <span class="header__lang-line">/</span>
-               <a class="header__lang-link" href="/index.html">англ.</a>
+               <a class="header__lang-link" href="/index.html" title="Открыть английскую версию">англ.</a>
+            </p>
+
+            <p class="header__theme theme">
+               <span class="theme__text">Темы:</span>
+               <button class="theme__btn" title="Сменить тему">
+                  <span>Сменить тему</span>
+               </button>
             </p>
          </section>
 
@@ -92,7 +111,8 @@
                   <p class="info__text"><span>День Рождение :</span> 11 Апреля 2000</p>
                   <p class="info__text"><span>Телефон :</span> 380666519328</p>
                   <p class="info__text"><span>Почта :</span> vgryadko@gmail.com</p>
-                  <p class="info__text"><span>Резюме :</span> <a href="/resume/Vladislav-Gryadko-ru.pdf" title="Открыть Резюме" target="_blank">Открыть Резюме</a></p>
+                  <p class="info__text"><span>Резюме :</span> <a href="/resume/Vladislav-Gryadko-ru.pdf"
+                        title="Открыть Резюме" target="_blank">Открыть Резюме</a></p>
                </section>
 
                <section class="about__skills skills">
@@ -213,7 +233,8 @@
                <include src="docs/icons/telegram.svg"></include>
             </a>
 
-            <a class="footer__social" href="https://github.com/VladislavDesu" title="Открыть мой Гитхаб" target="_blank">
+            <a class="footer__social" href="https://github.com/VladislavDesu" title="Открыть мой Гитхаб"
+               target="_blank">
                <span>Открыть Гитхаб</span>
                <include src="docs/icons/github.svg"></include>
             </a>

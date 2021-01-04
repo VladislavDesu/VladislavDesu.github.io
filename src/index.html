@@ -9,13 +9,17 @@
    <link rel="stylesheet" href="/css/styles.min.css">
 </head>
 
-<body id="home" class="loading">
+<body id="home" class="portfolio-theme portfolio-theme--dark">
    <div class="loader">
       <div class="loader__item"><div class="loader__point"></div></div>
       <div class="loader__item"><div class="loader__point"></div></div>
       <div class="loader__item"><div class="loader__point"></div></div>
       <div class="loader__item"><div class="loader__point"></div></div>
    </div>
+
+   <div class="progress-bar">
+      <div class="progress-bar__load" id="progressBar"></div>
+   </div>  
 
    <header class="header header--no-js">
       <div class="header__inner">
@@ -27,11 +31,11 @@
             </button>
 
             <nav class="header__list header__list--closed">
-               <a class="header__link" href="#home">Home</a>
-               <a class="header__link" href="#about">About</a>
-               <a class="header__link" href="#portfolio">Portfolio</a>
-               <a class="header__link" href="#services">Services</a>
-               <a class="header__link" href="#contacts">Contacts</a>
+               <a class="header__link" href="#home" title="Go to the section Home">Home</a>
+               <a class="header__link" href="#about" title="Go to the section About">About</a>
+               <a class="header__link" href="#portfolio" title="Go to the section Portfolio">Portfolio</a>
+               <a class="header__link" href="#services" title="Go to the section Services">Services</a>
+               <a class="header__link" href="#contacts" title="Go to the section Contacts">Contacts</a>
             </nav>
          </section>
 
@@ -46,9 +50,16 @@
 
             <p class="header__lang">
                <span class="header__lang-text">Languages:</span>
-               <a class="header__lang-link" href="/ru">ru</a>
+               <a class="header__lang-link" href="/ru" title="Open russian version">ru</a>
                <span class="header__lang-line">/</span>
-               <a class="header__lang-link" href="#home">eng</a>
+               <a class="header__lang-link" href="#home" title="Open english version">eng</a>
+            </p>
+
+            <p class="header__theme theme">
+               <span class="theme__text">Themes:</span>
+               <button class="theme__btn" title="Change theme">
+                  <span>Change theme</span>
+               </button>
             </p>
          </section>
 
