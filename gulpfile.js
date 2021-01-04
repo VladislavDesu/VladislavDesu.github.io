@@ -29,6 +29,8 @@ const paths = {
       scripts: "src/scripts/**/*.js",
       fonts: "src/fonts/**/*.ttf",
       portfolio: "src/portfolio-sites/**",
+      resume: "src/resume/**",
+      ru: "src/ru/**",
    },
 
    build: {
@@ -39,6 +41,8 @@ const paths = {
       scripts: "docs/scripts/",
       fonts: "docs/fonts/",
       portfolio: "docs/portfolio-sites/",
+      resume: "docs/resume/",
+      ru: "docs/ru/",
    },
 };
 
@@ -164,12 +168,14 @@ gulp.task("server", () => {
 });
 
 gulp.task("copy", () => {
-   return gulp.src(paths.build.portfolio, {
+   return gulp.src([paths.build.portfolio, paths.build.resume, paths.build.ru], {
          allowEmpty: true
       })
       .pipe(clean())
-      .pipe(gulp.src(paths.src.portfolio))
-      .pipe(gulp.dest(paths.build.portfolio))
+      .pipe(gulp.src([paths.src.portfolio, paths.src.resume, paths.src.ru], {
+         base: "src"
+      }))
+      .pipe(gulp.dest(paths.build.root))
       .pipe(browserSync.stream());
 });
 
