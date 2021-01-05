@@ -5,7 +5,7 @@ const webpack = require("webpack");
 
 module.exports = {
    entry: {
-      index: ["./src/scripts/removeLoader.js", "./src/scripts/scrollProgressBar.js", "./src/scripts/changeThemes.js", "./src/scripts/parallax.js", "./src/scripts/no-js.js", "./src/scripts/menu.js", "./src/scripts/createPortfolioCards.js", "./src/scripts/btn-up.js"],
+      index: ["./src/scripts/preloader.js", "./src/scripts/scrollProgressBar.js", "./src/scripts/changeThemes.js", "./src/scripts/parallax.js", "./src/scripts/no-js.js", "./src/scripts/menu.js", "./src/scripts/createPortfolioCards.js", "./src/scripts/buttonTop.js", "./src/scripts/shareButtons.js"],
    },
 
    output: {

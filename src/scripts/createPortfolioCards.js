@@ -7,12 +7,15 @@ function createPortfolioCards(cards) {
    const portfolioPhoto = portfolioTemplate.querySelector(".portfolio__photo");
    const portfolioName = portfolioTemplate.querySelector(".portfolio__name");
    const portfolioLink = portfolioTemplate.querySelector(".portfolio__link");
+   const copyInput = portfolioTemplate.querySelector(".portfolio__input");
+   const domain = "meportfolio.website";
 
    portfolioSource.srcset = cards.webp;
-   portfolioPhoto.src = cards.photo;
+   portfolioPhoto.src = cards.image;
    portfolioPhoto.alt = "Photo of the " + cards.name + " site";
    portfolioName.textContent = cards.name;
    portfolioLink.href = cards.link;
+   copyInput.value = domain + cards.link;
    const copyContent = portfolioTemplate.cloneNode(true);
    portfolioList.appendChild(copyContent);
 }
@@ -20,7 +23,7 @@ function createPortfolioCards(cards) {
 const portfolioCards = [{
       name: "Alexis",
       image: "/images/alexis.png",
-      webp: "/images/alexis.png",
+      webp: "/images/alexis.webp",
       link: "/portfolio-sites/alexis/"
    },
 
@@ -116,9 +119,6 @@ const portfolioCards = [{
    },
 ];
 
-const portfolio = document.querySelector("#portfolio");
-const portfolioBtn = portfolio.querySelector(".portfolio__btn");
-
 const portfolioCardsLen = portfolioCards.length;
 const portfolioItems = 0;
 const maxItems = 3;
@@ -129,6 +129,9 @@ let maxPortfolioItems = portfolioCardsLen;
 portfolioCards.slice(portfolioItems, minPortfolioItems).forEach((i) => {
    createPortfolioCards(i);
 });
+
+const portfolio = document.querySelector("#portfolio");
+const portfolioBtn = portfolio.querySelector(".portfolio__btn");
 
 portfolioBtn.addEventListener("click", (e) => {
    portfolioCards.slice(minPortfolioItems, maxPortfolioItems).forEach((i) => {

@@ -105,16 +105,24 @@
       color: var(--white-color);
    }
 
+   &__input {
+      @include hidden;
+   }
+
    &__links {
       display: flex;
    }
 
    &__link {
+      @include btn;
+      position: relative;
       margin-right: 15px;
       visibility: hidden;
       opacity: 0;
 
+      &:hover,
       &:focus {
+         text-decoration: none;
          outline: none;
       }
 
@@ -130,13 +138,25 @@
          transform: scale(1.2);
       }
 
-      & span {
+      & span:first-child {
          @include hidden;
       }
 
       &:last-child {
          margin-right: 0;
       }
+   }
+
+   &__tooltip {
+      position: absolute;
+      bottom: -30px;
+      display: none;
+      padding: 0 10px;
+      border-radius: 50px;
+      font-size: 16px;
+      color: var(--white-color);
+      background-color: #2e2e30;
+      white-space: nowrap;
    }
 
    &__photo {
