@@ -4,6 +4,10 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="
+      Меня зовут Владислав Грядко, я Веб Разработчик,
+      моя Гугл почта <vgryadko@gmail.com>.
+      Это мой сайт с портфолио для лучшего ознакомления с моими работы и навыками.">
    <title>My Portfolio</title>
    <link rel="icon" href="/icons/favicon.svg">
    <link rel="stylesheet" href="/css/styles.min.css">
@@ -228,24 +232,24 @@
    <footer class="footer">
       <div class="footer__inner">
          <p class="footer__socials">
-            <a class="footer__social" href="https://t.me/VladislavDesu" title="Открыть мой Телеграм" target="_blank">
+            <a class="footer__social" href="https://t.me/VladislavDesu" title="Открыть мой Телеграм" target="_blank" rel="noreferrer">
                <span>Мой Телеграм</span>
                <include src="docs/icons/telegram.svg"></include>
             </a>
 
             <a class="footer__social" href="https://github.com/VladislavDesu" title="Открыть мой Гитхаб"
-               target="_blank">
+               target="_blank" rel="noreferrer">
                <span>Открыть Гитхаб</span>
                <include src="docs/icons/github.svg"></include>
             </a>
 
             <a class="footer__social" href="https://www.linkedin.com/in/vladislav-gryadko/" title="Открыть мой ЛинкедИн"
-               target="_blank">
+               target="_blank" rel="noreferrer">
                <span>Открыть ЛинкедИн</span>
                <include src="docs/icons/linkedin.svg"></include>
             </a>
 
-            <a class="footer__social" href="#" title="Открыть мою Гугл Почту" target="_blank">
+            <a class="footer__social" href="#" title="Открыть мою Гугл Почту" target="_blank" rel="noreferrer">
                <span>Открыть Гугл Почту</span>
                <include src="docs/icons/gmail.svg"></include>
             </a>
@@ -271,7 +275,9 @@
          <div class="portfolio__info">
             <h3 class="portfolio__name">Name</h3>
 
-            <input type="text" class="portfolio__input">
+            <label class="portfolio__label">Cсылка на проект
+               <input type="text" class="portfolio__input">
+            </label>
 
             <div class="portfolio__links">
                <a class="portfolio__link" href="#" title="Открыть этот проект" target="_blank">

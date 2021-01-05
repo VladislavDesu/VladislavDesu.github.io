@@ -4,6 +4,10 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="
+      My name is Vladislav Gryadko, I'm Web Developer,
+      my Google mail is <vgryadko@gmail.com>.
+      This is my website with a portfolio for better acquaintance with my work and skills.">
    <title>My Portfolio</title>
    <link rel="icon" href="/icons/favicon.svg">
    <link rel="stylesheet" href="/css/styles.min.css">
@@ -11,15 +15,23 @@
 
 <body id="home" class="loading portfolio-theme portfolio-theme--dark">
    <div class="loader">
-      <div class="loader__item"><div class="loader__point"></div></div>
-      <div class="loader__item"><div class="loader__point"></div></div>
-      <div class="loader__item"><div class="loader__point"></div></div>
-      <div class="loader__item"><div class="loader__point"></div></div>
+      <div class="loader__item">
+         <div class="loader__point"></div>
+      </div>
+      <div class="loader__item">
+         <div class="loader__point"></div>
+      </div>
+      <div class="loader__item">
+         <div class="loader__point"></div>
+      </div>
+      <div class="loader__item">
+         <div class="loader__point"></div>
+      </div>
    </div>
 
    <div class="progress-bar">
       <div class="progress-bar__load" id="progressBar"></div>
-   </div>  
+   </div>
 
    <header class="header header--no-js">
       <div class="header__inner">
@@ -41,7 +53,7 @@
 
          <section class="header__promo">
             <h2 class="header__name">I'm Vladislav Gryadko</h2>
-            
+
             <ul class="header__info">
                <li>Web Developer</li>
                <li>Enthusiast</li>
@@ -103,7 +115,8 @@
                   <p class="info__text"><span>Birthday :</span> 11 April 2000</p>
                   <p class="info__text"><span>Phone Number :</span> 380666519328</p>
                   <p class="info__text"><span>E-Mail :</span> vgryadko@gmail.com</p>
-                  <p class="info__text"><span>CV :</span> <a href="/resume/Vladislav-Gryadko-en.pdf" title="Open my CV" target="_blank">Open CV</a></p>
+                  <p class="info__text"><span>CV :</span> <a href="/resume/Vladislav-Gryadko-en.pdf" title="Open my CV"
+                        target="_blank">Open CV</a></p>
                </section>
 
                <section class="about__skills skills">
@@ -219,22 +232,25 @@
    <footer class="footer">
       <div class="footer__inner">
          <p class="footer__socials">
-            <a class="footer__social" href="https://t.me/VladislavDesu" title="Open my Telegram" target="_blank">
+            <a class="footer__social" href="https://t.me/VladislavDesu" title="Open my Telegram" target="_blank"
+               rel="noreferrer">
                <span>My Telegram</span>
                <include src="docs/icons/telegram.svg"></include>
             </a>
 
-            <a class="footer__social" href="https://github.com/VladislavDesu" title="Open my Github" target="_blank">
+            <a class="footer__social" href="https://github.com/VladislavDesu" title="Open my Github" target="_blank"
+               rel="noreferrer">
                <span>My Github</span>
                <include src="docs/icons/github.svg"></include>
             </a>
 
-            <a class="footer__social" href="https://www.linkedin.com/in/vladislav-gryadko/" title="Open my Linkedin" target="_blank">
+            <a class="footer__social" href="https://www.linkedin.com/in/vladislav-gryadko/" title="Open my Linkedin"
+               target="_blank" rel="noreferrer">
                <span>My Linkedin</span>
                <include src="docs/icons/linkedin.svg"></include>
             </a>
 
-            <a class="footer__social" href="#" title="Open my Google Mail" target="_blank">
+            <a class="footer__social" href="#" title="Open my Google Mail" target="_blank" rel="noreferrer">
                <span>My Google Mail</span>
                <include src="docs/icons/gmail.svg"></include>
             </a>
@@ -260,10 +276,12 @@
          <div class="portfolio__info">
             <h3 class="portfolio__name">Name</h3>
 
-            <input type="text" class="portfolio__input">
+            <label class="portfolio__label">Project link
+               <input type="text" class="portfolio__input">
+            </label>
 
             <div class="portfolio__links">
-               <a class="portfolio__link" href="#" title="Open to this project"  target="_blank">
+               <a class="portfolio__link" href="#" title="Open to this project" target="_blank">
                   <span>Open to this project</span>
                   <include src="docs/icons/link.svg"></include>
                </a>

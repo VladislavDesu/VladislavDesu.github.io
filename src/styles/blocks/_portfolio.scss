@@ -105,8 +105,9 @@
       color: var(--white-color);
    }
 
-   &__input {
+   &__label {
       @include hidden;
+      visibility: hidden;
    }
 
    &__links {
