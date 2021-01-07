@@ -13,5 +13,5 @@ themeBtn.addEventListener("click", (e) => {
    localStorage.setItem("themeNight", themeBtn.classList.contains("theme__btn--light"));
 });
 
-localStorage.themeNight === "true" ? $('.theme__btn').addClass("theme__btn--light"): '';
-localStorage.themeNight === "true" ? $('#home').removeClass("portfolio-theme--dark"): '';
+localStorage.themeNight === "true" ? $(".theme__btn").addClass("theme__btn--light"): "";
+localStorage.themeNight === "true" ? $("#home").removeClass("portfolio-theme--dark"): "";

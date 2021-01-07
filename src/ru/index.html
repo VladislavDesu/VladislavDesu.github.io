@@ -4,10 +4,8 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta name="description" content="
-      Меня зовут Владислав Грядко, я Веб Разработчик,
-      моя Гугл почта <vgryadko@gmail.com>.
-      Это мой сайт с портфолио для лучшего ознакомления с моими работы и навыками.">
+   <meta name="description"
+      content="Меня зовут Владислав Грядко, я Веб Разработчик, моя Гугл почта <vgryadko@gmail.com>. Это мой сайт с портфолио для лучшего ознакомления с моими работы и навыками.">
    <title>My Portfolio</title>
    <link rel="icon" href="/icons/favicon.svg">
    <link rel="stylesheet" href="/css/styles.min.css">
@@ -43,31 +41,32 @@
             </button>
 
             <nav class="header__list header__list--closed">
-               <a class="header__link" href="#home" title="Перейти в раздел Главная">Главная</a>
-               <a class="header__link" href="#about" title="Перейти в раздел Обо мне">Обо мне</a>
-               <a class="header__link" href="#portfolio" title="Перейти в раздел Портфолио">Портфолио</a>
-               <a class="header__link" href="#services" title="Перейти в раздел Сервисы">Сервисы</a>
-               <a class="header__link" href="#contacts" title="Перейти в раздел Контакты">Контакты</a>
+               <a class="header__link wow fadeInRight" href="#home" title="Перейти в раздел Главная">Главная</a>
+               <a class="header__link wow fadeInRight" href="#about" title="Перейти в раздел Обо мне">Обо мне</a>
+               <a class="header__link wow fadeInRight" href="#portfolio"
+                  title="Перейти в раздел Портфолио">Портфолио</a>
+               <a class="header__link wow fadeInRight" href="#services" title="Перейти в раздел Сервисы">Сервисы</a>
+               <a class="header__link wow fadeInRight" href="#contacts" title="Перейти в раздел Контакты">Контакты</a>
             </nav>
          </section>
 
          <section class="header__promo">
-            <h2 class="header__name">Я Владислав Грядко</h2>
+            <h2 class="header__name wow fadeInLeft">Я Владислав Грядко</h2>
 
-            <ul class="header__info">
+            <ul class="header__info wow fadeInLeft">
                <li>Веб Разработчик</li>
                <li>Энтузиаст</li>
                <li>Гик</li>
             </ul>
 
-            <p class="header__lang">
+            <p class="header__lang wow fadeInLeft">
                <span class="header__lang-text">Язык:</span>
                <a class="header__lang-link" href="#home" title="Открыть русскую версию">рус.</a>
                <span class="header__lang-line">/</span>
                <a class="header__lang-link" href="/index.html" title="Открыть английскую версию">англ.</a>
             </p>
 
-            <p class="header__theme theme">
+            <p class="header__theme theme wow fadeInLeft">
                <span class="theme__text">Ночной режим:</span>
                <button class="theme__btn" type="button" title="Сменить ночной режим">
                   <span>Сменить ночной режим</span>
@@ -75,7 +74,7 @@
             </p>
          </section>
 
-         <a href="#about" class="header__arrow arrow" title="Перейти в раздел Обо мне">
+         <a href="#about" class="header__arrow arrow wow bounceIn" title="Перейти в раздел Обо мне">
             <span class="arrow__text">Перейти в раздел Обо мне</span>
             <span class="arrow__element">
                <span class="arrow__line"></span>
@@ -88,15 +87,15 @@
    <main class="content">
       <section id="about" class="about">
          <div class="about__inner">
-            <h2 class="about__title">Обо мне</h2>
-            <p class="about__text">
+            <h2 class="about__title wow fadeInLeft">Обо мне</h2>
+            <p class="about__text wow fadeInRight" data-wow-offset="100">
                Learning front-end technology about one year. I am a <span>Junior front-end developer</span>. I want to
                achieve great
                success in this case, for this i am learning new technologies, reading interesting articles, taking
                online courses.
             </p>
 
-            <p class="about__text">
+            <p class="about__text wow fadeInLeft" data-wow-offset="100">
                <span>Junior</span> is one of the steps to <span>Middle front-end developer</span>, for
                this i am learning <span>JavaScript's Frameworks</span> and <span>CMS</span>. Created layouts for myself,
                to improve my knowledge in practice.
@@ -106,24 +105,24 @@
                <section class="about__info info">
                   <h3 class="info__title">Большо информации обо мне</h3>
 
-                  <picture>
+                  <picture class="wow fadeInLeft">
                      <source srcset="/images/my-photo.webp">
                      <img class="info__photo" src="/images/my-photo.jpg" width="491" height="1094" alt="Моя фотография">
                   </picture>
 
-                  <p class="info__text"><span>Имя :</span> Владислав Грядко</p>
-                  <p class="info__text"><span>День Рождение :</span> 11 Апреля 2000</p>
-                  <p class="info__text"><span>Телефон :</span> 380666519328</p>
-                  <p class="info__text"><span>Почта :</span> vgryadko@gmail.com</p>
-                  <p class="info__text"><span>Резюме :</span> <a href="/resume/Vladislav-Gryadko-ru.pdf"
+                  <p class="info__text wow fadeInLeft"><span>Имя :</span> Владислав Грядко</p>
+                  <p class="info__text wow fadeInLeft"><span>День Рождение :</span> 11 Апреля 2000</p>
+                  <p class="info__text wow fadeInLeft"><span>Телефон :</span> 380666519328</p>
+                  <p class="info__text wow fadeInLeft"><span>Почта :</span> vgryadko@gmail.com</p>
+                  <p class="info__text wow fadeInLeft"><span>Резюме :</span> <a href="/resume/Vladislav-Gryadko-ru.pdf"
                         title="Открыть Резюме" target="_blank">Открыть Резюме</a></p>
                </section>
 
                <section class="about__skills skills">
-                  <h3 class="skills__title">Навыки</h3>
+                  <h3 class="skills__title wow fadeInRight">Навыки</h3>
 
                   <ul class="skills__list">
-                     <li class="skills__item">
+                     <li class="skills__item wow fadeInRight">
                         <p class="skills__name">HTML5 & CSS3</p>
 
                         <div class="skills__range">
@@ -131,7 +130,7 @@
                         </div>
                      </li>
 
-                     <li class="skills__item">
+                     <li class="skills__item wow fadeInRight">
                         <p class="skills__name">Bootstrap</p>
 
                         <div class="skills__range">
@@ -139,7 +138,7 @@
                         </div>
                      </li>
 
-                     <li class="skills__item">
+                     <li class="skills__item wow fadeInRight">
                         <p class="skills__name">JavaScript</p>
 
                         <div class="skills__range">
@@ -154,11 +153,11 @@
 
       <section id="portfolio" class="portfolio">
          <div class="portfolio__inner">
-            <h2 class="portfolio__title">Портфолио</h2>
+            <h2 class="portfolio__title wow fadeInRight">Портфолио</h2>
 
             <ul class="portfolio__list"></ul>
 
-            <button class="portfolio__btn" type="button" title="Показать больше">
+            <button class="portfolio__btn wow bounceIn" type="button" title="Показать больше">
                <span>Показать больше</span>
             </button>
          </div>
@@ -166,10 +165,10 @@
 
       <section id="services" class="services">
          <div class="services__inner">
-            <h2 class="services__title">Сервисы</h2>
+            <h2 class="services__title wow fadeInLeft">Сервисы</h2>
 
             <ul class="services__list">
-               <li class="services__item">
+               <li class="services__item wow bounceInUp" data-wow-offset="200">
                   <h3 class="services__subtitle">Title</h3>
 
                   <p class="services__text">
@@ -179,7 +178,7 @@
                   </p>
                </li>
 
-               <li class="services__item">
+               <li class="services__item wow bounceInUp" data-wow-offset="200">
                   <h3 class="services__subtitle">Title</h3>
 
                   <p class="services__text">
@@ -189,7 +188,7 @@
                   </p>
                </li>
 
-               <li class="services__item">
+               <li class="services__item wow bounceInUp" data-wow-offset="200">
                   <h3 class="services__subtitle">Title</h3>
 
                   <p class="services__text">
@@ -204,22 +203,22 @@
 
       <section id="contacts" class="contacts">
          <div class="contacts__inner">
-            <h2 class="contacts__title">Контакты</h2>
+            <h2 class="contacts__title wow fadeInRight">Контакты</h2>
 
             <ul class="contacts__list">
-               <li class="contacts__item">
+               <li class="contacts__item wow bounceInUp" data-wow-offset="125">
                   <h3 class="contacts__subtitle">Title</h3>
 
                   <p class="contacts__text">Lorem ipsum dolor sit amet</p>
                </li>
 
-               <li class="contacts__item">
+               <li class="contacts__item wow bounceInUp" data-wow-offset="125">
                   <h3 class="contacts__subtitle">Title</h3>
 
                   <p class="contacts__text">Lorem ipsum dolor sit amet</p>
                </li>
 
-               <li class="contacts__item">
+               <li class="contacts__item wow bounceInUp" data-wow-offset="125">
                   <h3 class="contacts__subtitle">Title</h3>
 
                   <p class="contacts__text">Lorem ipsum dolor sit amet</p>
@@ -231,14 +230,15 @@
 
    <footer class="footer">
       <div class="footer__inner">
-         <p class="footer__socials">
-            <a class="footer__social" href="https://t.me/VladislavDesu" title="Открыть мой Телеграм" target="_blank" rel="noreferrer">
+         <p class="footer__socials wow bounceInUp">
+            <a class="footer__social" href="https://t.me/VladislavDesu" title="Открыть мой Телеграм" target="_blank"
+               rel="noreferrer">
                <span>Мой Телеграм</span>
                <include src="docs/icons/telegram.svg"></include>
             </a>
 
-            <a class="footer__social" href="https://github.com/VladislavDesu" title="Открыть мой Гитхаб"
-               target="_blank" rel="noreferrer">
+            <a class="footer__social" href="https://github.com/VladislavDesu" title="Открыть мой Гитхаб" target="_blank"
+               rel="noreferrer">
                <span>Открыть Гитхаб</span>
                <include src="docs/icons/github.svg"></include>
             </a>
@@ -266,7 +266,7 @@
    </a>
 
    <template id="portfolio-item">
-      <li class="portfolio__item">
+      <li class="portfolio__item wow bounceInUp" data-wow-offset="125">
          <picture>
             <source srcset="#">
             <img class="portfolio__photo" src="#" width="768" height="400" alt="Alternative text">
@@ -276,7 +276,7 @@
             <h3 class="portfolio__name">Name</h3>
 
             <label class="portfolio__label">Cсылка на проект
-               <input type="text" class="portfolio__input">
+               <input type="text" class="portfolio__input" tabindex="-1">
             </label>
 
             <div class="portfolio__links">

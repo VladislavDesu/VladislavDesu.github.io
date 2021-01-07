@@ -2,10 +2,8 @@
 
 const $ = require("jquery");
 
-$(window).on('load', () => {
-   setTimeout(() => {
-      $(".loader").fadeOut(1000, () => {
-         $("body").removeClass("loading");
-      });
-   }, 1500);
+$(window).on("load", () => {
+   $(".loader").fadeOut(500, () => {
+      $("body").removeClass("loading");
+   });
 });

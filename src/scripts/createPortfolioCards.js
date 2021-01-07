@@ -1,5 +1,7 @@
 "use strict";
 
+const $ = require("jquery");
+
 function createPortfolioCards(cards) {
    const portfolioList = document.querySelector(".portfolio__list");
    const portfolioTemplate = document.querySelector("#portfolio-item").content;
@@ -18,6 +20,23 @@ function createPortfolioCards(cards) {
    copyInput.value = domain + cards.link;
    const copyContent = portfolioTemplate.cloneNode(true);
    portfolioList.appendChild(copyContent);
+}
+
+function shareBtns() {
+   const copyBtn = portfolio.querySelectorAll(".portfolio__link--copy");
+   const copyInput = portfolio.querySelectorAll(".portfolio__input");
+
+   for (let count = 0; count < copyBtn.length; count++) {
+      copyBtn[count].addEventListener("click", (e) => {
+         e.preventDefault();
+         copyInput[count].select();
+         document.execCommand("copy");
+         $(`.portfolio__tooltip:eq(${count})`).fadeIn(1000);
+         setTimeout(() => {
+            $(`.portfolio__tooltip:eq(${count})`).fadeOut(1000);
+         }, 1500);
+      });
+   };
 }
 
 const portfolioCards = [{
@@ -142,4 +161,8 @@ portfolioBtn.addEventListener("click", (e) => {
    if (minPortfolioItems === maxPortfolioItems) {
       portfolioBtn.style.display = "none";
    };
+
+   shareBtns();
 });
+
+shareBtns();

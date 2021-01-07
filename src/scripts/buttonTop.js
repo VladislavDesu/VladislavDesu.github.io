@@ -2,7 +2,7 @@
 
 const $ = require("jquery");
 
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
    if (pageYOffset > 1000) {
       $(".arrow--btn-up").fadeIn(500);
    } else {
