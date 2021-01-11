@@ -34,7 +34,6 @@
       margin-bottom: 15px;
    }
 
-
    &__photo {
       display: block;
       width: 110px;
@@ -42,7 +41,7 @@
       margin: 0 auto;
       border-radius: 50%;
       object-fit: cover;
-      object-position: center 15%;
+      object-position: top;
    }
 }
 
