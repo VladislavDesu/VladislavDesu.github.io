@@ -54,6 +54,13 @@ const portfolioCards = [
       link: "/portfolio-sites/uber/",
    },
 
+      {
+      name: "Timbler",
+      image: "/images/timbler.png",
+      webp: "/images/timbler.webp",
+      link: "/portfolio-sites/timbler/",
+   },
+
    {
       name: "Alexis",
       image: "/images/alexis.png",
