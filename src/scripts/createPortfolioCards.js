@@ -10,6 +10,7 @@ function createPortfolioCards(cards) {
    const portfolioName = portfolioTemplate.querySelector(".portfolio__name");
    const portfolioLink = portfolioTemplate.querySelector(".portfolio__link");
    const copyInput = portfolioTemplate.querySelector(".portfolio__input");
+   const portfolioGithub = portfolioTemplate.querySelector(".portfolio__link--github");
    const domain = "meportfolio.website";
 
    portfolioSource.srcset = cards.webp;
@@ -17,6 +18,7 @@ function createPortfolioCards(cards) {
    portfolioPhoto.alt = "Photo of the " + cards.name + " site";
    portfolioName.textContent = cards.name;
    portfolioLink.href = cards.link;
+   portfolioGithub.href = cards.github;
    copyInput.value = domain + cards.link;
    const copyContent = portfolioTemplate.cloneNode(true);
    portfolioList.appendChild(copyContent);
@@ -45,13 +47,15 @@ const portfolioCards = [
       image: "/images/wordpress-intensive.png",
       webp: "/images/wordpress-intensive.webp",
       link: "/portfolio-sites/wordpress-intensive/",
+      github: "https://github.com/VladislavDesu/wordpress-intensive",
    },
 
    {
       name: "Uber Partners",
-      image: "/images/uber.png",
-      webp: "/images/uber.webp",
-      link: "/portfolio-sites/uber/",
+      image: "/images/uber-partners.png",
+      webp: "/images/uber-partners.webp",
+      link: "/portfolio-sites/uber-partners/",
+      github: "https://github.com/VladislavDesu/uber-partners",
    },
 
       {
@@ -59,6 +63,7 @@ const portfolioCards = [
       image: "/images/timbler.png",
       webp: "/images/timbler.webp",
       link: "/portfolio-sites/timbler/",
+      github: "https://github.com/VladislavDesu/timbler",
    },
 
    {
@@ -66,6 +71,7 @@ const portfolioCards = [
       image: "/images/alexis.png",
       webp: "/images/alexis.webp",
       link: "/portfolio-sites/alexis/",
+      github: "https://github.com/VladislavDesu/alexis",
    },
 
    {
@@ -73,6 +79,7 @@ const portfolioCards = [
       image: "/images/pulse.png",
       webp: "/images/pulse.webp",
       link: "/portfolio-sites/pulse/",
+      github: "https://github.com/VladislavDesu/pulse",
    },
 
    {
@@ -80,6 +87,7 @@ const portfolioCards = [
       image: "/images/sedona.png",
       webp: "/images/sedona.webp",
       link: "/portfolio-sites/sedona/",
+      github: "https://github.com/VladislavDesu/sedona",
    },
 
    {
@@ -87,6 +95,7 @@ const portfolioCards = [
       image: "/images/mogo.png",
       webp: "/images/mogo.webp",
       link: "/portfolio-sites/mogo/",
+      github: "https://github.com/VladislavDesu/mogo",
    },
 
    {
@@ -94,6 +103,7 @@ const portfolioCards = [
       image: "/images/cat-energy.png",
       webp: "/images/cat-energy.webp",
       link: "/portfolio-sites/cat-energy/",
+      github: "https://github.com/VladislavDesu/cat-energy",
    },
 
    {
@@ -101,6 +111,7 @@ const portfolioCards = [
       image: "/images/gllacy.png",
       webp: "/images/gllacy.webp",
       link: "/portfolio-sites/gllacy/",
+      github: "https://github.com/VladislavDesu/gllacy",
    },
 
    {
@@ -108,6 +119,7 @@ const portfolioCards = [
       image: "/images/misocial.png",
       webp: "/images/misocial.webp",
       link: "/portfolio-sites/misocial/",
+      github: "https://github.com/VladislavDesu/misocial",
    },
 
    {
@@ -115,6 +127,7 @@ const portfolioCards = [
       image: "/images/nerds.png",
       webp: "/images/nerds.webp",
       link: "/portfolio-sites/nerds/",
+      github: "https://github.com/VladislavDesu/nerds",
    },
 
    {
@@ -122,6 +135,7 @@ const portfolioCards = [
       image: "/images/borodinski.png",
       webp: "/images/borodinski.webp",
       link: "/portfolio-sites/borodinski/",
+      github: "https://github.com/VladislavDesu/borodinski",
    },
 
    {
@@ -129,6 +143,7 @@ const portfolioCards = [
       image: "/images/covid.png",
       webp: "/images/covid.webp",
       link: "/portfolio-sites/covid/",
+      github: "https://github.com/VladislavDesu/covid",
    },
 
    {
@@ -136,6 +151,7 @@ const portfolioCards = [
       image: "/images/project-one.png",
       webp: "/images/project-one.webp",
       link: "/portfolio-sites/project-one/",
+      github: "https://github.com/VladislavDesu/project-one",
    },
 
    {
@@ -143,6 +159,7 @@ const portfolioCards = [
       image: "/images/styles-conference.png",
       webp: "/images/styles-conference.webp",
       link: "/portfolio-sites/styles-conference/",
+      github: "https://github.com/VladislavDesu/styles-conference",
    },
 
    {
@@ -150,6 +167,7 @@ const portfolioCards = [
       image: "/images/mycompany.png",
       webp: "/images/mycompany.webp",
       link: "/portfolio-sites/mycompany/",
+      github: "https://github.com/VladislavDesu/mycompany",
    },
 
    {
@@ -157,6 +175,7 @@ const portfolioCards = [
       image: "/images/kvast.png",
       webp: "/images/kvast.webp",
       link: "/portfolio-sites/kvast/",
+      github: "https://github.com/VladislavDesu/kvast",
    },
 ];
 

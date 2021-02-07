@@ -48,6 +48,12 @@
       &:hover .portfolio__link--copy {
          visibility: visible;
          opacity: 1;
+         transition: opacity 0.4s ease-out 1.4s;
+      }
+
+      &:hover .portfolio__link--github {
+         visibility: visible;
+         opacity: 1;
          transition: opacity 0.4s ease-out 1.6s;
       }
    }
