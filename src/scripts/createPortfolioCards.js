@@ -10,7 +10,9 @@ function createPortfolioCards(cards) {
    const portfolioName = portfolioTemplate.querySelector(".portfolio__name");
    const portfolioLink = portfolioTemplate.querySelector(".portfolio__link");
    const copyInput = portfolioTemplate.querySelector(".portfolio__input");
-   const portfolioGithub = portfolioTemplate.querySelector(".portfolio__link--github");
+   const portfolioGithub = portfolioTemplate.querySelector(
+      ".portfolio__link--github"
+   );
    const domain = "meportfolio.website";
 
    portfolioSource.srcset = cards.webp;
@@ -43,6 +45,13 @@ function shareBtns() {
 
 const portfolioCards = [
    {
+      name: "Prengi",
+      image: "/images/prengi.png",
+      webp: "/images/prengi.webp",
+      link: "/portfolio-sites/prengi/",
+      github: "https://github.com/VladislavDesu/prengi",
+   },
+   {
       name: "Wordpress Intensive",
       image: "/images/wordpress-intensive.png",
       webp: "/images/wordpress-intensive.webp",
@@ -58,7 +67,7 @@ const portfolioCards = [
       github: "https://github.com/VladislavDesu/uber-partners",
    },
 
-      {
+   {
       name: "Timbler",
       image: "/images/timbler.png",
       webp: "/images/timbler.webp",
