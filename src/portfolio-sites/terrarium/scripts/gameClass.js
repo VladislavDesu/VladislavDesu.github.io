@@ -20,45 +20,11 @@ export default class Game {
    }
 
    startGame() {
-      this.loadGame();
       this.updateInfo();
       this.clickBtns();
    }
 
-   loadGame() {
-      if (localStorage.getItem("lvl")) {
-         let storage = +localStorage.getItem("lvl");
-         this._animal.lvl = storage;
-      }
-      if (localStorage.getItem("satiety")) {
-         let storage = +localStorage.getItem("satiety");
-         this._animal.satiety = storage;
-      }
-      if (localStorage.getItem("currency")) {
-         let storage = +localStorage.getItem("currency");
-         this._animal.currency = storage;
-      }
-      if (localStorage.getItem("food")) {
-         let storage = +localStorage.getItem("food");
-         this._animal.food = storage;
-      }
-   }
-
-   saveGame() {
-      let lvlStorage = localStorage.setItem("lvl", this._animal.lvl);
-      let satietyStorage = localStorage.setItem(
-         "satiety",
-         this._animal.satiety
-      );
-      let currencyStorage = localStorage.setItem(
-         "currency",
-         this._animal.currency
-      );
-      let foodStorage = localStorage.setItem("food", this._animal.food);
-   }
-
    updateInfo() {
-      this.saveGame();
       this._levelOutput.textContent = this._animal.lvl;
       this._satietyOutput.textContent = this._animal.satiety;
       this._currencyOutput.textContent = this._animal.currency;
@@ -89,7 +55,13 @@ export default class Game {
       if (chance <= 2) {
          let foundedFood = Math.round(Math.random() * 9 + 1);
          this._animal.currency += foundedFood;
-         this.showSuccessNotification(`Вы нашли ${foundedFood} Крысок`);
+         if (foundedFood === 1) {
+            this.showSuccessNotification(`Вы нашли ${foundedFood} Крыску`);
+         } else if (foundedFood === 2 || foundedFood === 3 || foundedFood === 4) {
+            this.showSuccessNotification(`Вы нашли ${foundedFood} Крыски`);
+         } else {
+            this.showSuccessNotification(`Вы нашли ${foundedFood} Крысок`);
+         }
       }
    }
 
@@ -150,9 +122,9 @@ export default class Game {
    }
 
    clickClickerAuto(obj) {
-      let timer = setTimeout(function feeding() {
+      setTimeout(function feeding() {
          obj.feedAnimal();
-         let timer = setTimeout(feeding, 1000);
+         setTimeout(feeding, 1000);
       }, 1000);
    }
 
@@ -180,10 +152,10 @@ export default class Game {
    }
 
    hideNotification(notification) {
-      let timer = setTimeout(() => {
+      setTimeout(() => {
          notification.classList.add("hide-notification");
          notification.classList.remove("show-notification");
-         let timer = setTimeout(() => {
+         setTimeout(() => {
             notification.remove();
          }, 500);
       }, 3000);
