@@ -156,14 +156,6 @@ const portfolioCards = [
    },
 
    {
-      name: "Project One",
-      image: "/images/project-one.png",
-      webp: "/images/project-one.webp",
-      link: "/portfolio-sites/project-one/",
-      github: "https://github.com/VladislavDesu/project-one",
-   },
-
-   {
       name: "Styles Conference",
       image: "/images/styles-conference.png",
       webp: "/images/styles-conference.webp",
