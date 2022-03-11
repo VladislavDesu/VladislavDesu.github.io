@@ -1,0 +1,20 @@
+/*--------------------
+  LOGO
+--------------------*/
+@import "../../assets/styles/helpers/utils";
+
+.logotype {
+  @include text($fw-base, 40px, $lh-base, $primary);
+  font-family: "GreatVibes", "Times New Roman", serif;
+  text-decoration: none;
+  transition: transform 0.15s linear;
+
+  @include media($tabletL) {
+    font-size: 30px;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+}

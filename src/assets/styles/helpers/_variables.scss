@@ -1,0 +1,38 @@
+/* --------------------
+  VARIABLES
+-------------------- */
+
+// LESS - @
+// SCSS, SASS - $
+// CSS - var(--variable)
+
+// COLOR
+$white: #ffffff;
+$gray: #f7f9fa;
+$gray-dark: #919191;
+$black: #000000;
+$primary: #9749f3;
+
+// FONT
+$ff-base: "Inter", "Arial", sans-serif;
+$fw-base: 400;
+$fs-base: normal;
+$fz-base: 18px;
+$lh-base: 1.5;
+
+// MEDIA
+$mobileS: 320px;
+$mobileM: 375px;
+$mobileL: 425px;
+$tabletS: 480px;
+$tabletM: 640px;
+$tabletL: 768px;
+$laptopS: 992px;
+$laptopM: 1024px;
+$laptopL: 1200px;
+
+// COMPONENTS STYLES VARIABLES
+$container: 1230px;
+$padding: 30px;
+$gap: 20px;
+$border-radius: 16px;

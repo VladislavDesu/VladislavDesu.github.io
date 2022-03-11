@@ -1,0 +1,47 @@
+/*--------------------
+  MIXINS
+--------------------*/
+@import "variables";
+
+// LESS MIXINS EXAMPLE .size(20px, 20px)
+// .size(@width, @height) {
+//   width: @width;
+//   height: @height;
+// }
+
+// SASS,SCSS MIXINS EXAMPLE @include size(20px, 20px)
+// @mixin size($width, $height) {
+//   width: $width;
+//   height: $height;
+// }
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin text($weight: $fw-base, $size: $fz-base, $height: $lh-base, $color: $black, $family: $ff-base, $style: $fs-base) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $height;
+  font-family: $family;
+  color: $color;
+  font-style: $style;
+}
+
+@mixin media($widthValue, $width: max-width) {
+  @media only screen and ($width: $widthValue) {
+    @content;
+  }
+}
+
+@mixin font-face($font-name, $path, $weight: 400, $style: normal) {
+  @font-face {
+    font-weight: $weight;
+    font-family: $font-name;
+    font-style: $style;
+    src: url(#{$path}.woff2) format("woff2");
+    font-display: swap;
+    unicode-range: U+000-5FF; /* Latin glyphs */
+  }
+}

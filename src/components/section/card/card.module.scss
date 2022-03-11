@@ -1,0 +1,75 @@
+/*--------------------
+  CARD
+--------------------*/
+@import "../../../assets/styles/helpers/utils";
+
+.card {
+  &-info {
+    padding: $padding;
+    border-radius: $border-radius;
+    background-color: $white;
+
+    &:not(:last-child) {
+      margin-bottom: $gap;
+    }
+  }
+
+  &-title {
+    text-align: center;
+    margin-bottom: $gap;
+  }
+
+  p {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+
+      @include media($tabletM) {
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  ul {
+    > li {
+      position: relative;
+      padding-left: 16px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 14px;
+        left: 0;
+        width: 6px;
+        height: 6px;
+        border-radius: 100%;
+        background-color: $black;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  time {
+    display: block;
+    margin-bottom: 16px;
+    color: $primary;
+  }
+
+  h4 {
+    margin-bottom: 24px;
+
+    a {
+      color: $primary;
+    }
+  }
+
+  a {
+    @include text(inherit, inherit, inherit);
+    transition: color 0.15s linear;
+
+    &:hover,
+    &:focus {
+      color: $primary;
+      text-decoration: none;
+    }
+  }
+}

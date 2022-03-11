@@ -1,0 +1,191 @@
+/*--------------------
+  HEADER
+--------------------*/
+@import "../../assets/styles/helpers/utils";
+
+.header {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  background-color: $white;
+  box-shadow: inset 0 -1px 0 0 $black;
+
+  &-btn {
+    position: relative;
+    display: none;
+    width: 26px;
+    height: 26px;
+    margin-left: auto;
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 2px;
+    @include text(400, 0);
+    transition: border 0.15s linear;
+    cursor: pointer;
+
+    @include media($tabletL) {
+      display: block;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: $black;
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      width: 14px;
+      height: 2px;
+      background-color: $black;
+      transform: translateX(-50%);
+    }
+
+    &:before {
+      top: 5px;
+      box-shadow: 0 5px 0 0 $black;
+      transition: top 0.15s linear, box-shadow 0.15s linear, transform 0.15s linear;
+    }
+
+    &:after {
+      bottom: 5px;
+      transition: top 0.15s linear, transform 0.15s linear;
+    }
+
+    &-close {
+      &:before {
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        box-shadow: none
+      }
+
+      &:after {
+        bottom: auto;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+    }
+  }
+
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+
+    @include media($tabletL) {
+      padding: 10px 0;
+    }
+  }
+
+  &-list {
+    display: flex;
+
+    @include media($laptopS) {
+      width: 100%;
+    }
+
+    @include media($tabletL) {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 0;
+    }
+  }
+
+  &-item {
+    &:not(:last-child) {
+      margin-right: calc(#{$gap} * 1.5);
+
+      @include media($laptopS) {
+        margin-right: 0;
+      }
+
+      @include media($tabletL) {
+        margin-bottom: 15px;
+      }
+    }
+
+    @include media($laptopS) {
+      flex-grow: 1;
+      text-align: center;
+    }
+  }
+
+  &-link {
+    position: relative;
+    display: block;
+    @include text(500, 20px);
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: color 0.15s linear;
+    cursor: pointer;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: $black;
+      transition: width 0.15s linear, background-color 0.15s linear;
+    }
+
+    &:hover,
+    &:focus {
+      color: $primary;
+
+      &:before {
+        width: 100%;
+        background-color: $primary;
+      }
+    }
+  }
+
+  &-nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    @include media($laptopS) {
+      width: 100%;
+      margin-left: $gap;
+    }
+
+    @include media($tabletL) {
+      position: absolute;
+      left: 0;
+      top: 100%;
+      max-height: 0;
+      align-items: flex-start;
+      width: 100%;
+      margin: 0;
+      background-color: $white;
+      transition: max-height 0.25s linear, visibility 0.25s linear;
+      overflow: hidden;
+      visibility: hidden;
+    }
+
+    &-open {
+      max-height: 295px;
+      visibility: visible;
+    }
+  }
+}
+
+.overlay-hidden {
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($black, 0.5);
+  }
+}

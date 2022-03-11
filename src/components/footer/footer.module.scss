@@ -1,0 +1,59 @@
+/*--------------------
+  FOOTER
+--------------------*/
+@import "../../assets/styles/helpers/utils";
+
+.footer {
+  padding: 40px 0;
+
+  @include media($tabletM) {
+    padding: 20px 0;
+  }
+
+  &-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+
+    @include media($tabletM) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &-item {
+    &:not(:last-child) {
+      margin-right: $gap;
+    }
+  }
+
+  &-link {
+    display: block;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid $black;
+    border-radius: 100%;
+    font-size: 0;
+    transition: 0.15s border-color linear;
+
+    svg {
+      width: 100%;
+      height: auto;
+      transition: fill 0.15s linear;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: $primary;
+
+      svg {
+        fill: $primary;
+      }
+    }
+  }
+
+  &-copyright {
+    text-align: center;
+  }
+}

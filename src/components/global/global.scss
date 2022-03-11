@@ -1,0 +1,48 @@
+/*--------------------
+  GLOBAL
+--------------------*/
+@import "../../assets/styles/index";
+
+a {
+  cursor: pointer;
+}
+
+h1 {
+  @include text(600, 60px);
+
+  @include media($tabletL) {
+    font-size: 50px;
+  }
+}
+
+h2 {
+  @include text(500, 46px);
+
+  @include media($tabletL) {
+    font-size: 40px;
+  }
+}
+
+h3 {
+  @include text(500, 32px);
+
+  @include media($tabletL) {
+    font-size: 28px;
+  }
+}
+
+h4 {
+  @include text(500, 24px);
+
+  @include media($tabletL) {
+    font-size: 20px;
+  }
+}
+
+h5 {
+  @include text(400, $fz-base);
+
+  @include media($tabletL) {
+    font-size: 16px;
+  }
+}

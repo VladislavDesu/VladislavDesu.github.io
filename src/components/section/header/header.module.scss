@@ -1,0 +1,33 @@
+/*--------------------
+  SECTION HEADER
+--------------------*/
+@import "../../../assets/styles/helpers/utils";
+
+.header {
+  margin-bottom: 60px;
+  text-align: center;
+
+  @include media($tabletL) {
+    margin-bottom: 40px;
+  }
+
+  &-title {
+    @include text(500, 46px, 46px);
+
+    @include media($tabletL) {
+      font-size: 36px;
+      line-height: 36px;
+    }
+  }
+
+  &-hide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    font-size: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}

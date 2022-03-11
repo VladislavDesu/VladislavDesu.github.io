@@ -1,0 +1,30 @@
+/*--------------------
+  PORTFOLIO
+--------------------*/
+@import "../../assets/styles/helpers/utils";
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$gap;
+  margin-bottom: -$gap;
+
+  &-item {
+    width: calc(33.33% - #{$gap});
+    margin-left: $gap;
+    margin-bottom: $gap;
+
+    @include media($laptopS) {
+      width: calc(50% - #{$gap});
+    }
+
+    @include media($tabletM) {
+      width: 100%;
+    }
+
+    img {
+      border-radius: $border-radius;
+      border: 1px solid $gray-dark;
+    }
+  }
+}
