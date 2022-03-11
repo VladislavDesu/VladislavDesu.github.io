@@ -12,7 +12,7 @@ import {author} from "../../assets/config/author";
 import {socials} from "../../assets/config/socials";
 import Section from "../section";
 import {sections} from "../../assets/config/sections";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 const Contacts = () => {
     const {phoneNumber, email} = author;

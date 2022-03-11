@@ -2,7 +2,7 @@ import React from "react";
 import {
     list,
 } from "./list.module.scss";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 const List = ({item}) => {
     return (

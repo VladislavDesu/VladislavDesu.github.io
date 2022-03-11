@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 import {skills} from "../../assets/config/skills";
 import {titles} from "../../assets/config/titles";
 import Card from "../section/card";
 import List from "../section/list";
 import Section from "../section";
 import {sections} from "../../assets/config/sections";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 const Skills = () => {
     const {

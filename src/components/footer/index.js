@@ -11,7 +11,7 @@ import {author} from "../../assets/config/author";
 import {icons} from "../../assets/icons";
 import {generateSocials} from "../../assets/utils/utils";
 import {socials} from "../../assets/config/socials";
-import {v4 as uuidv4} from 'uuid';
+import {v4 as uuidv4} from "uuid";
 
 const Footer = () => {
     const {nickname} = author;

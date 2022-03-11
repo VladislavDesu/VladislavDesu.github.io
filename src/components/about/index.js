@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import List from "../section/list";
 import Card from "../section/card";
 import {convertPhoneNumber, fullName, generateInfo} from "../../assets/utils/utils";
@@ -6,7 +6,7 @@ import {titles} from "../../assets/config/titles";
 import {author} from "../../assets/config/author";
 import Section from "../section";
 import {sections} from "../../assets/config/sections";
-import {v4 as uuidv4} from 'uuid';
+import {v4 as uuidv4} from "uuid";
 import {about} from "../../assets/config/about";
 
 const About = () => {

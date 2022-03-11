@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import List from "../section/list";
 import {titles} from "../../assets/config/titles";
 import Card from "../section/card";
@@ -6,7 +6,7 @@ import {experience} from "../../assets/config/experience";
 import {education} from "../../assets/config/education";
 import Section from "../section";
 import {sections} from "../../assets/config/sections";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 const Experience = () => {
     const {experience: {card}} = titles;

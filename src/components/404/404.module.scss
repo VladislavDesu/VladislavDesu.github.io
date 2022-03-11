@@ -1,0 +1,84 @@
+/*--------------------
+  404
+--------------------*/
+@import "../../assets/styles/helpers/utils";
+
+.error {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: $container;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0 15px;
+
+  @include media($tabletL) {
+    justify-content: flex-end;
+    flex-direction: column-reverse;
+    padding-top: 40px;
+  }
+
+  > div {
+    width: 50%;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+
+      @include media($tabletL) {
+        margin-top: 30px;
+        margin-right: 0;
+      }
+    }
+
+    @include media($tabletL) {
+      width: auto;
+    }
+  }
+
+  &-title {
+    @include media($laptopS) {
+      font-size: 48px;
+    }
+
+    @include media($tabletL) {
+      font-size: 35px;
+    }
+  }
+
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: wave;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+
+    @keyframes wave {
+      0% {
+        transform: translateY(-20px);
+      }
+
+      100% {
+        transform: translateY(20px);
+      }
+    }
+
+    svg {
+      width: 400px;
+      max-width: 100%;
+      height: auto;
+
+      @include media($tabletL) {
+        width: 200px;
+      }
+    }
+  }
+
+  &-text {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}

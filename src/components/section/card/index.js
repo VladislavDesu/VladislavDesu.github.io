@@ -4,7 +4,7 @@ import {
     cardTitle,
     cardInfo
 } from "./card.module.scss";
-import {v4 as uuidv4} from 'uuid';
+import {v4 as uuidv4} from "uuid";
 
 const Card = ({title, info}) => {
     return (

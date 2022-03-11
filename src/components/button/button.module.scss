@@ -1,0 +1,21 @@
+/*--------------------
+  BUTTON
+--------------------*/
+@import "../../assets/styles/helpers/utils";
+
+.button {
+  display: inline-flex;
+  padding: 8px 32px;
+  border: 2px solid $primary;
+  text-decoration: none;
+  font-weight: 500;
+  color: $primary;
+  border-radius: 10px;
+  background-color: transparent;
+  transition: background-color 0.15s linear;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($primary, 0.1);
+  }
+}

@@ -16,7 +16,7 @@ import Logo from "../logo";
 import {nav} from "../../assets/config/nav";
 import {toCapitalize} from "../../assets/utils/utils";
 import {Link} from "gatsby";
-import {v4 as uuidv4} from 'uuid';
+import {v4 as uuidv4} from "uuid";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
