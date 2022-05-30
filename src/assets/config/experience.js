@@ -14,12 +14,12 @@ export const experience = [
             "BEM Methodology",
             "Create PDF files",
             "Bootstrap 5 Theme (CRM)",
-            "Slick slider",
             "WowJS & AnimateCSS & Green Sock & React Spring",
             "chartJS",
             "jQuery & jQuery UI",
-            "React & Redux",
-            "Gulp & Webpack",
+            "React & Redux & Typescript",
+            "Gulp & Webpack & Parcel",
+            "Web3 Technologies",
             "Gatsby"
         ]
     },

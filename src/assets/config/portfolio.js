@@ -1,121 +1,58 @@
 export const portfolio = [
     {
-        "name": "prengi",
-        "title": "Prengi",
-        "id": "Prengi",
-        "text": "Training Layout. Created to test my knowledge.",
-        "skills": ["html", "scss", "gulp", "photoshop"]
+        name: "Exoqual",
+        id: "Exoqual",
     },
     {
-        "name": "wordpress-intensive",
-        "title": "Wordpress Intensive",
-        "id": "WordpressIntensive",
-        "text": "Training Layout. Created to test my knowledge.",
-        "skills": ["html", "scss", "gulp", "photoshop"]
+        name: "AngelsAndDemons",
+        id: "AngelsAndDemons",
     },
     {
-        "name": "uber-partners",
-        "title": "Uber Partners",
-        "id": "UberPartners",
-        "text": "Training Layout. Created to test my knowledge.",
-        "skills": ["html", "scss", "gulp", "photoshop"]
+        name: "Dca",
+        id: "Dca",
     },
     {
-        "name": "timbler",
-        "title": "Timbler",
-        "id": "Timbler",
-        "text": "Training Layout. Created to test my knowledge.",
-        "skills": ["html", "scss", "gulp", "photoshop"]
+        name: "Robotto",
+        id: "Robotto",
     },
     {
-        "name": "alexis",
-        "title": "Alexis",
-        "id": "Alexis",
-        "text": "Training Layout. Created to test my knowledge.",
-        "skills": ["html", "css"]
+        name: "BatGirl",
+        id: "BatGirl",
     },
     {
-        "name": "pulse",
-        "title": "Pulse",
-        "id": "Pulse",
-        "text": "Training Layout. Created to test my knowledge.",
-        "skills": ["html", "scss", "gulp", "Javascript", "swiperJS", "photoshop"]
+        name: "Iggy",
+        id: "Iggy",
     },
     {
-        "name": "sedona",
-        "title": "Sedona",
-        "id": "Sedona",
-        "text": "Training Layout. Created to test my knowledge.",
-        "skills": ["html", "scss", "gulp", "Javascript", "photoshop"]
+        name: "Zappyeels",
+        id: "Zappyeels",
     },
     {
-        "name": "cat-energy",
-        "title": "Cat Energy",
-        "id": "CatEnergy",
-        "text": "Training Layout. Created to test my knowledge.",
-        "skills": ["html", "scss", "gulp", "Javascript", "photoshop"]
+        name: "wmcdacktpa",
+        id: "Wmcdacktpa",
     },
     {
-        "name": "mogo",
-        "title": "Mogo",
-        "id": "Mogo",
-        "text": "Training Layout. Created to test my knowledge.",
-        "skills": ["html", "css", "Javascript", "font awesome", "photoshop"]
+        name: "ttf",
+        id: "Ttf",
     },
     {
-        "name": "gllacy",
-        "title": "Gllacy",
-        "id": "Gllacy",
-        "text": "Training Layout. Created to test my knowledge.",
-        "skills": ["html", "css", "Javascript", "photoshop"]
+        name: "Rexit",
+        id: "Rexit",
     },
     {
-        "name": "misocial",
-        "title": "Misocial",
-        "id": "Misocial",
-        "text": "Training Layout. Created to test my knowledge.",
-        "skills": ["html", "css", "photoshop"]
+        name: "Classy Essay Writer",
+        id: "ClassyEssayWriter",
     },
     {
-        "name": "nerds",
-        "title": "Nerds",
-        "id": "Nerds",
-        "text": "Training Layout. Created to test my knowledge.",
-        "skills": ["html", "css", "Javascript", "photoshop"]
+        name: "Custom Written Papers",
+        id: "CustomWrittenPapers",
     },
     {
-        "name": "borodinski",
-        "title": "Borodinski",
-        "id": "Borodinski",
-        "text": "Training Layout. Created to test my knowledge.",
-        "skills": ["html", "css", "Javascript", "photoshop"]
+        name: "Essay Writing Services",
+        id: "EssayWritingServices",
     },
     {
-        "name": "covid",
-        "title": "Covid-19",
-        "id": "Covid",
-        "text": "Training Layout. Created to test my knowledge.",
-        "skills": ["html", "css", "figma"]
+        name: "Take My Exam",
+        id: "TakeMyExam",
     },
-    {
-        "name": "styles-conference",
-        "title": "Styles Conference",
-        "id": "StylesConference",
-        "text": "Training Layout. Created to test my knowledge.",
-        "skills": ["html", "css", "photoshop"]
-    },
-    {
-        "name": "mycompany",
-        "title": "My Company",
-        "id": "MyCompany",
-        "text": "Training Layout. Created to test my knowledge.",
-        "skills": ["html", "css", "photoshop"]
-    },
-    {
-        "name": "kvast",
-        "title": "Kvast",
-        "id": "Kvast",
-        "text": "Training Layout. Created to test my knowledge.",
-        "skills": ["html", "css", "photoshop"]
-    }
 ];

@@ -1,39 +1,33 @@
 import Me from "./images/general/me.webp";
-import Borodinski from "./images/portfolio/borodinski.webp";
-import Alexis from "./images/portfolio/alexis.webp";
-import CatEnergy from "./images/portfolio/cat-energy.webp";
-import Covid from "./images/portfolio/covid.webp";
-import Gllacy from "./images/portfolio/gllacy.webp";
-import Kvast from "./images/portfolio/kvast.webp";
-import Misocial from "./images/portfolio/misocial.webp";
-import Mogo from "./images/portfolio/mogo.webp";
-import MyCompany from "./images/portfolio/mycompany.webp";
-import Nerds from "./images/portfolio/nerds.webp";
-import Prengi from "./images/portfolio/prengi.webp";
-import Pulse from "./images/portfolio/pulse.webp";
-import Sedona from "./images/portfolio/sedona.webp";
-import StylesConference from "./images/portfolio/styles-conference.webp";
-import Timbler from "./images/portfolio/timbler.webp";
-import UberPartners from "./images/portfolio/uber-partners.webp";
-import WordpressIntensive from "./images/portfolio/wordpress-intensive.webp";
+import Wmcdacktpa from "./images/portfolio/wmcdacktpa.webp";
+import Ttf from "./images/portfolio/ttf.webp";
+import Rexit from "./images/portfolio/rexit.webp";
+import ClassyEssayWriter from "./images/portfolio/classyessaywriter.webp";
+import CustomWrittenPapers from "./images/portfolio/customwrittenpapers.webp";
+import EssayWritingServices from "./images/portfolio/essaywritingservices.webp";
+import TakeMyExam from "./images/portfolio/takemyexam.webp";
+import Exoqual from "./images/portfolio/exoqual.webp";
+import Dca from "./images/portfolio/dca.webp";
+import AngelsAndDemons from "./images/portfolio/angels-and-demons.webp";
+import BatGirl from "./images/portfolio/bat-girl.webp";
+import Iggy from "./images/portfolio/iggy.webp";
+import Zappyeels from "./images/portfolio/zappyeels.webp";
+import Robotto from "./images/portfolio/robotto.webp";
 
 export const images = {
     Me,
-    Borodinski,
-    Alexis,
-    CatEnergy,
-    Covid,
-    Gllacy,
-    Kvast,
-    Misocial,
-    Mogo,
-    MyCompany,
-    Nerds,
-    Prengi,
-    Pulse,
-    Sedona,
-    StylesConference,
-    Timbler,
-    UberPartners,
-    WordpressIntensive
+    Exoqual,
+    Robotto,
+    BatGirl,
+    AngelsAndDemons,
+    Dca,
+    Zappyeels,
+    Iggy,
+    Wmcdacktpa,
+    Ttf,
+    ClassyEssayWriter,
+    CustomWrittenPapers,
+    EssayWritingServices,
+    TakeMyExam,
+    Rexit,
 }
